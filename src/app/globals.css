@@ -4,6 +4,16 @@
 
 * {
   scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-menu li a.active {
+  color: #75ccd7;
+}
+
+.navbar-menu li a:hover {
+  color: white;
 }
 
 .nav-menu {
@@ -20,10 +30,20 @@
 
 @layer base {
   h1 {
-    @apply capitalize text-secondary text-[28px] leading-[34px] font-[600]  sm:text-[40px] sm:leading-[48px] lg:font-[500] lg:text-[6vw] lg:leading-[6vw] 3xl:text-[8vw] 3xl:leading-[8vw];
+    @apply capitalize text-secondary text-[28px] leading-[34px] font-[600]  sm:text-[40px] sm:leading-[48px] lg:font-[500] lg:text-[8.5vw] lg:leading-[8.5vw] 3xl:text-[9.5vw] 3xl:leading-[9.5vw];
   }
 
   h2 {
     @apply uppercase text-[24px] leading-[24px] font-[600] sm:text-[32px] sm:leading-[32px] md:text-[48px] md:leading-[48px];
+  }
+}
+
+@layer components {
+  .container {
+    @apply px-[20px] bg-background;
+  }
+
+  .primary-btn {
+    @apply w-[400px] xl:text-lg py-2.5 rounded-full bg-primary text-background flex justify-center items-center gap-3 font-medium;
   }
 }
