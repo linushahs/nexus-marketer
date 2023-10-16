@@ -1,5 +1,6 @@
 import { ArrowUpRightIcon } from "@heroicons/react/20/solid";
 import ArrowUpRight from "./assets/ArrowUpRight";
+import Image from "next/image";
 
 function Homepage() {
   return (
@@ -9,6 +10,7 @@ function Homepage() {
         <hr className="absolute top-1/2 right-0 w-[400px] border-tertiary" />
       </div>
 
+      {/* headline, subtext -------------  */}
       <div className="flex gap-8 items-start">
         <h1>
           Problemos <br />
@@ -32,6 +34,22 @@ function Homepage() {
           </span>
         </div>
       </div>
+
+      {/* location, launched date ---------  */}
+      <div className="my-4 flex justify-between text-secondary text-lg">
+        <h3>Kathmandu, Nepal</h3>
+        <h3>2022 Nexus Marketers</h3>
+      </div>
+
+      {/* thumbnail ----------  */}
+      <Image
+        src="/assets/landing-thumbnail.png"
+        alt="thumbnail"
+        width={1000}
+        height={200}
+        priority={true}
+        className="w-full"
+      />
     </section>
   );
 }

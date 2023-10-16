@@ -9,7 +9,7 @@ function Navbar() {
           <Logo className="w-12 h-12" />
         </div>
         {/* right side  */}
-        <ul className="navbar-menu lg:flex items-center gap-12 hidden font-[500] text-lg 3xl:text-xl">
+        <ul className="navbar-menu lg:flex items-center ml-32 gap-16 hidden font-[500] text-lg 3xl:text-xl">
           <li>
             <a href="#home" className="active">
               Home
