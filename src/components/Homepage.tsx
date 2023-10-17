@@ -1,10 +1,9 @@
 import { ArrowUpRightIcon } from "@heroicons/react/20/solid";
-import ArrowUpRight from "./assets/ArrowUpRight";
 import Image from "next/image";
 
 function Homepage() {
   return (
-    <section className="container relative py-10">
+    <section className="container relative py-8">
       <div className="flex items-center relative">
         <h1 className="w-full">Digital Dilemmas,</h1>
         <hr className="absolute top-1/2 right-0 w-[400px] border-tertiary" />
@@ -36,9 +35,9 @@ function Homepage() {
       </div>
 
       {/* location, launched date ---------  */}
-      <div className="my-4 flex justify-between text-secondary text-lg">
-        <h3>Kathmandu, Nepal</h3>
-        <h3>2022 Nexus Marketers</h3>
+      <div className="mt-6 mb-4 flex justify-between text-secondary text-lg">
+        <h4>Kathmandu, Nepal</h4>
+        <h4>2022 Nexus Marketers</h4>
       </div>
 
       {/* thumbnail ----------  */}

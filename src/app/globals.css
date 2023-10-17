@@ -36,6 +36,10 @@
   h2 {
     @apply uppercase text-[24px] leading-[24px] font-[600] sm:text-[32px] sm:leading-[32px] md:text-[48px] md:leading-[48px];
   }
+
+  h3 {
+    @apply capitalize text-[20px] leading-[26px] 3xl:text-[40px] 3xl:leading-[40px];
+  }
 }
 
 @layer components {

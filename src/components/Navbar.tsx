@@ -34,7 +34,7 @@ function Navbar() {
 
         <div className="flex items-center capitalize gap-2">
           <hr className="w-14 border-tertiary" />
-          <h3>nexusmarketers@gmail.com</h3>
+          <h4>nexusmarketers@gmail.com</h4>
           <ArrowUpRightIcon className="border border-secondary p-2 rounded-full w-8 h-8 " />
         </div>
       </div>
