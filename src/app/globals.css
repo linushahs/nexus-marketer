@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --card-top-padding: 32px;
+}
+
 * {
   scroll-behavior: smooth;
   margin: 0;
@@ -28,13 +32,33 @@
   transform: translateX(0);
 }
 
+.achievement:nth-child(1) {
+  --index: 1;
+}
+
+.achievement:nth-child(2) {
+  --index: 2;
+}
+
+.achievement:nth-child(3) {
+  --index: 3;
+}
+
+.achievement {
+  padding-top: calc(var(--index) * var(--card-top-padding));
+}
+
+.achievement-body {
+  box-shadow: -5px -5px 12px 0px rgba(0, 0, 0, 0.1);
+}
+
 @layer base {
   h1 {
     @apply capitalize text-secondary text-[28px] leading-[34px] font-[600]  sm:text-[40px] sm:leading-[48px] lg:font-[500] lg:text-[8.5vw] lg:leading-[8.5vw] 3xl:text-[9.5vw] 3xl:leading-[9.5vw];
   }
 
   h2 {
-    @apply uppercase text-[24px] leading-[24px] font-[600] sm:text-[32px] sm:leading-[32px] md:text-[48px] md:leading-[48px];
+    @apply capitalize text-[24px] leading-[24px] font-[500] sm:text-[32px] sm:leading-[32px] md:text-[48px] md:leading-[48px] lg:text-[64px] lg:leading-[64px];
   }
 
   h3 {
