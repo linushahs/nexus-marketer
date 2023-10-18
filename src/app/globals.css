@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --card-top-padding: 32px;
-}
-
 * {
   scroll-behavior: smooth;
   margin: 0;
@@ -30,26 +26,6 @@
 .nav-menu.active {
   visibility: visible;
   transform: translateX(0);
-}
-
-.achievement:nth-child(1) {
-  --index: 1;
-}
-
-.achievement:nth-child(2) {
-  --index: 2;
-}
-
-.achievement:nth-child(3) {
-  --index: 3;
-}
-
-.achievement {
-  padding-top: calc(var(--index) * var(--card-top-padding));
-}
-
-.achievement-body {
-  box-shadow: -5px -5px 12px 0px rgba(0, 0, 0, 0.1);
 }
 
 @layer base {

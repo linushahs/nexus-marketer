@@ -1,4 +1,5 @@
 import Image from "next/image";
+import "./css/achievement.css";
 
 function Achievements() {
   return (
@@ -10,11 +11,11 @@ function Achievements() {
 
       <div className="flex flex-col gap-8 mt-8">
         {new Array(3).fill(0).map((_, id: number) => (
-          <div key={id} className="achievement sticky top-0    shadow-lg">
+          <div key={id} className="achievement sticky top-0 shadow-lg">
             {/* achievement body ----  */}
             <div className="achievement-body flex rounded-lg">
               {/* left section ----    */}
-              <div className="w-1/2 bg-card flex flex-col text-white justify-center items-center rounded-lg">
+              <div className="w-1/2  flex flex-col text-white justify-center items-center rounded-lg">
                 <span className="text-lg lg:text-xl py-1 px-4 rounded-full border border-secondary text-secondary capitalize">
                   marketing and advertisement
                 </span>
