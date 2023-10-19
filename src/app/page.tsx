@@ -3,6 +3,7 @@ import Achievements from "@/components/Achievements";
 import Homepage from "@/components/Homepage";
 import Introduction from "@/components/Introduction";
 import Navbar from "@/components/Navbar";
+import OurTeam from "@/components/OurTeam";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <About />
       <Introduction />
       <Achievements />
+      <OurTeam />
     </main>
   );
 }
