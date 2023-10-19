@@ -3,7 +3,9 @@ import Image from "next/image";
 function Introduction() {
   return (
     <section className="container relative py-8 ">
-      <h1>we are nexus marketers</h1>
+      <h1>
+        we are nexus <br /> marketers
+      </h1>
 
       <div className="flex flex-col lg:flex-row gap-12 justify-end text-tertiary my-12">
         <p className="w-full sm:w-2/3 lg:w-1/3">

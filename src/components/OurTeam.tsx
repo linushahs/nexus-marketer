@@ -50,7 +50,7 @@ const teamInfo = [
 
 function OurTeam() {
   return (
-    <section className="container py-10 border-b border-gray-200 ">
+    <section className="container py-10  ">
       <h1>our creative teams</h1>
 
       <HorizontalSlider className="mt-12 sm:mt-16 text-white items-start rounded-none gap-x-10 sm:gap-x-12 lg:gap-x-20">

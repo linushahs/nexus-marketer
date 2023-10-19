@@ -8,17 +8,17 @@ function Homepage() {
   return (
     <section className="container relative py-8">
       <div className="flex items-center relative">
-        <motion.h1
+        <motion.p
           initial={{ x: -100, opacity: 0 }}
           animate={{
             x: 0,
             opacity: 100,
             transition: { delay: 1, duration: 1 },
           }}
-          className="w-[90%] sm:w-[80%] 3xl:w-[85%]"
+          className="landing-title w-[90%] sm:w-[80%] 3xl:w-[85%]"
         >
           Digital Dilemmas,
-        </motion.h1>
+        </motion.p>
         <motion.hr
           initial={{ y: "-100%", opacity: 0 }}
           animate={{ y: 0, opacity: 100, transition: { delay: 1 } }}
@@ -28,17 +28,18 @@ function Homepage() {
 
       {/* headline, subtext -------------  */}
       <div className="flex flex-col lg:flex-row gap-8 items-start">
-        <motion.h1
+        <motion.p
           initial={{ x: -100, opacity: 0 }}
           animate={{
             x: 0,
             opacity: 100,
             transition: { delay: 1, duration: 1 },
           }}
+          className="landing-title"
         >
           Problemos <br />
           <span className="text-primary">Solved</span>
-        </motion.h1>
+        </motion.p>
 
         <div className="w-full sm:w-2/3 ml-auto lg:m-0 lg:w-1/3">
           <motion.p

@@ -30,7 +30,7 @@
 
 @layer base {
   h1 {
-    @apply capitalize text-secondary font-[600] lg:font-[500] text-[8.5vw] leading-[8.5vw] 3xl:text-[9.5vw] 3xl:leading-[9.5vw];
+    @apply capitalize text-secondary font-[600] lg:font-[500] text-[7vw] leading-[7vw] 3xl:text-[8.5vw] 3xl:leading-[8.5vw];
   }
 
   h2 {
@@ -49,5 +49,9 @@
 
   .primary-btn {
     @apply w-[340px] sm:w-[400px] text-sm sm:text-base xl:text-lg py-2.5 rounded-full bg-primary text-background flex justify-center items-center gap-3 font-medium;
+  }
+
+  .landing-title {
+    @apply capitalize text-secondary font-[600] lg:font-[500] text-[8.5vw] leading-[8.5vw] 3xl:text-[9.5vw] 3xl:leading-[9.5vw];
   }
 }
