@@ -13,9 +13,9 @@ function Achievements() {
         {new Array(3).fill(0).map((_, id: number) => (
           <div key={id} className="achievement sticky top-0 shadow-lg">
             {/* achievement body ----  */}
-            <div className="achievement-body flex rounded-lg">
+            <div className="achievement-body p-6 sm:p-0 flex flex-col sm:flex-row rounded-lg">
               {/* left section ----    */}
-              <div className="w-1/2  flex flex-col text-white justify-center items-center rounded-lg">
+              <div className="w-full mb-8 sm:m-0 sm:w-1/2  flex flex-col text-white justify-center items-center rounded-lg">
                 <span className="sm:text-lg lg:text-xl py-1 px-4 rounded-full border border-secondary text-secondary capitalize">
                   marketing and advertisement
                 </span>
@@ -36,7 +36,7 @@ function Achievements() {
                 alt="achievement-thumbnail"
                 width={800}
                 height={300}
-                className="w-1/2 h-[450px] lg:h-[600px]"
+                className="w-full sm:w-1/2 sm:h-[450px] lg:h-[600px]"
               />
             </div>
           </div>

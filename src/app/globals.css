@@ -34,7 +34,7 @@
   }
 
   h2 {
-    @apply capitalize text-[24px] leading-[24px] font-[500] sm:text-[40px] sm:leading-[48px] lg:text-[64px] lg:leading-[64px];
+    @apply capitalize text-[32px] leading-[32px] font-[500] sm:text-[40px] sm:leading-[48px] lg:text-[64px] lg:leading-[64px];
   }
 
   h3 {
