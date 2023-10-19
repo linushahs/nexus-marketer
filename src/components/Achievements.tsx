@@ -16,16 +16,16 @@ function Achievements() {
             <div className="achievement-body flex rounded-lg">
               {/* left section ----    */}
               <div className="w-1/2  flex flex-col text-white justify-center items-center rounded-lg">
-                <span className="text-lg lg:text-xl py-1 px-4 rounded-full border border-secondary text-secondary capitalize">
+                <span className="sm:text-lg lg:text-xl py-1 px-4 rounded-full border border-secondary text-secondary capitalize">
                   marketing and advertisement
                 </span>
 
-                <h2 className="text-center my-12">
+                <h2 className="text-center my-8 lg:my-12">
                   some marketing <br /> project in recent <br />
                   days
                 </h2>
 
-                <button className="text-lg lg:text-xl  font-medium bg-primary rounded-full py-1.5 px-6 text-black capitalize">
+                <button className="sm:text-lg lg:text-xl  font-medium bg-primary rounded-full py-1.5 px-6 text-black capitalize">
                   view project
                 </button>
               </div>
