@@ -38,7 +38,8 @@
   }
 
   h3 {
-    @apply capitalize text-[20px] leading-[26px] 3xl:text-[40px] 3xl:leading-[40px];
+    @apply capitalize text-[20px] leading-[26px] 
+    lg:text-[24px] lg:leading-[32px] 3xl:text-[40px] 3xl:leading-[40px];
   }
 }
 

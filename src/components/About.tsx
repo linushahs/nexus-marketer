@@ -1,33 +1,63 @@
 import Image from "next/image";
 
-const headingStyle =
-  "flex-1 w-fit bg-secondary px-8 py-4 rounded-md font-medium";
+const headingStyle = "flex-1 text-secondary font-medium";
 
 function About() {
   return (
     <section className="container relative py-8 ">
       <h1>Who Are We</h1>
 
-      <div className="flex gap-8 items-center mt-12">
-        <div className="flex-1 flex justify-center">
+      <div className="flex justify-between gap-8 items-start mt-12 text-white">
+        <div className="pl-20 flex relative">
           <Image
-            src="/assets/aboutus.svg"
+            src="/assets/introduction-pic1.png"
             alt="about-us"
-            width={300}
+            width={400}
             height={200}
           />
+
+          <div className="flex gap-4 w-full absolute top-1/2 left-2/3 -translate-y-1/2 ">
+            <h3>01</h3>
+            <h3>
+              Are we a Marketing and <br />
+              advertisement agency?
+            </h3>
+          </div>
         </div>
 
-        <h3 className={headingStyle}>1. Marketing and advertisement agency?</h3>
+        <div className="flex flex-col gap-4 pr-12">
+          <Image
+            src="/assets/introduction-pic2.png"
+            alt="about-us"
+            width={400}
+            height={200}
+          />
+          <div className="flex gap-4 ">
+            <h3>02</h3>
+            <h3>
+              an online agency that <br />
+              promotes business?
+            </h3>
+          </div>
+        </div>
       </div>
 
-      <h3 className={`${headingStyle} mt-12`}>
-        2. an online agency that promotes business?
-      </h3>
-
-      <h3 className={`${headingStyle} mt-[150px] ml-auto`}>
-        3. okay how about a company that handles all your social media
-      </h3>
+      <div className="pl-12 flex items-center text-white mt-8 relative">
+        <div className="flex gap-4 ">
+          <h3 className="">03</h3>
+          <h3 className="z-20">
+            okay how about a company <br /> that handles all your social <br />
+            media
+          </h3>
+        </div>
+        <Image
+          src="/assets/introduction-pic3.png"
+          alt="about-us"
+          width={400}
+          height={200}
+          className="-ml-20 "
+        />
+      </div>
     </section>
   );
 }
