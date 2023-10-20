@@ -100,13 +100,16 @@ function Navbar() {
 
       {/* backdrop : black ----------- */}
       {isMenuOpen && (
-        <div className="fixed top-0 left-0 w-full h-screen z-20 bg-black/30"></div>
+        <div
+          onClick={() => setIsMenuOpen(false)}
+          className="fixed top-0 left-0 w-full h-screen z-20 bg-black/30"
+        ></div>
       )}
 
       {/* list of menus (in small devices: tab & mobile) ---->  */}
       <div
         className={twMerge(
-          "nav-menu top-0 right-0 fixed h-full w-[92%] sm:w-[70%] bg-background flex flex-col justify-between z-30",
+          "nav-menu top-0 right-0 fixed h-full w-[92%] sm:w-[60%] bg-background flex flex-col justify-between z-30",
           isMenuOpen && "active"
         )}
       >
@@ -125,7 +128,7 @@ function Navbar() {
           {menus.map((menu) => (
             <li
               key={menu.id}
-              className="my-2.5 py-3 text-3xl border-b border-tertiary font-medium  cursor-pointer hover:font-bold"
+              className="my-2.5 py-3 text-3xl border-b border-tertiary font-medium  cursor-pointer "
             >
               <a
                 className="flex justify-between items-center text-white capitalize"

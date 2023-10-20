@@ -20,7 +20,7 @@
   visibility: hidden;
   transform: translateX(100%);
   margin-left: auto;
-  transition: all 0.3s linear;
+  transition: all 0.5s ease-in-out;
 }
 
 .nav-menu.active {
@@ -30,7 +30,7 @@
 
 @layer base {
   h1 {
-    @apply capitalize text-secondary font-[600] lg:font-[500] text-[7vw] leading-[7vw] 3xl:text-[8.5vw] 3xl:leading-[8.5vw];
+    @apply capitalize text-secondary font-[600] lg:font-[500] text-[42px] leading-[42px] sm:text-[7vw] sm:leading-[7vw] 3xl:text-[8.5vw] 3xl:leading-[8.5vw];
   }
 
   h2 {
