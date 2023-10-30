@@ -1,35 +1,6 @@
 import Image from "next/image";
 import { ArrowUpRightIcon } from "@heroicons/react/24/outline";
-
-const services = [
-  {
-    title: (
-      <h4>
-        Content and digital <br /> marketing
-      </h4>
-    ),
-    imgSrc: "/assets/services1.jpg",
-    url: "",
-  },
-  {
-    title: (
-      <h4>
-        Content and digital <br /> marketing
-      </h4>
-    ),
-    imgSrc: "/assets/services2.jpg",
-    url: "",
-  },
-  {
-    title: (
-      <h4>
-        Content and digital <br /> marketing
-      </h4>
-    ),
-    imgSrc: "/assets/services3.jpg",
-    url: "",
-  },
-];
+import { services } from "./utils/constants";
 
 function OurServices() {
   return (
@@ -49,7 +20,10 @@ function OurServices() {
 
               {/* bottom section -------  */}
               <div className="text-secondary flex justify-between items-start mt-6 text-lg sm:text-xl lg:text-2xl">
-                {service.title}
+                <h4>
+                  {service.title.split("\n")[0]} <br />{" "}
+                  {service.title.split("\n")[1]}
+                </h4>
 
                 <a href="#" className="flex items-center gap-3">
                   View details{" "}

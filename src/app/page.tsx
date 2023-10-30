@@ -5,6 +5,7 @@ import Introduction from "@/components/Introduction";
 import Navbar from "@/components/Navbar";
 import OurServices from "@/components/OurServices";
 import OurTeam from "@/components/OurTeam";
+import WorkProcess from "@/components/WorkProcess";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <Achievements />
       <OurTeam />
       <OurServices />
+      <WorkProcess />
     </main>
   );
 }
