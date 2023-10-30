@@ -2,34 +2,34 @@
   --card-top-padding: 32px;
 }
 
-.achievement:nth-child(1) {
+.sticky-container:nth-child(1) {
   --index: 1;
 }
 
-.achievement:nth-child(2) {
+.sticky-container:nth-child(2) {
   --index: 2;
 }
 
-.achievement:nth-child(3) {
+.sticky-container:nth-child(3) {
   --index: 3;
 }
 
-.achievement:nth-child(1) .achievement-body {
+.sticky-container:nth-child(1) .sticky-body {
   background-color: #1d1d1d;
 }
 
-.achievement:nth-child(2) .achievement-body {
+.sticky-container:nth-child(2) .sticky-body {
   background-color: #232323;
 }
 
-.achievement:nth-child(3) .achievement-body {
+.sticky-container:nth-child(3) .sticky-body {
   background-color: #2e2e2e;
 }
 
-.achievement {
+.sticky-container {
   padding-top: calc(var(--index) * var(--card-top-padding));
 }
 
-.achievement-body {
+.sticky-body {
   box-shadow: -5px -5px 12px 0px rgba(0, 0, 0, 0.1);
 }

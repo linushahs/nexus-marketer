@@ -11,9 +11,9 @@ function Achievements() {
 
       <div className="flex flex-col gap-8 mt-8">
         {new Array(3).fill(0).map((_, id: number) => (
-          <div key={id} className="achievement sticky top-0 shadow-lg">
+          <div key={id} className="sticky-container sticky top-0 shadow-lg">
             {/* achievement body ----  */}
-            <div className="achievement-body p-6 sm:p-0 flex flex-col sm:flex-row rounded-lg">
+            <div className="sticky-body p-6 sm:p-0 flex flex-col sm:flex-row rounded-lg">
               {/* left section ----    */}
               <div className="w-full mb-8 sm:m-0 sm:w-1/2  flex flex-col text-white justify-center items-center rounded-lg">
                 <span className="sm:text-lg lg:text-xl py-1 px-4 rounded-full border border-secondary text-secondary capitalize">
