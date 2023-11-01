@@ -1,11 +1,11 @@
 "use client";
 
+import { Bars3Icon } from "@heroicons/react/20/solid";
 import { ArrowUpRightIcon } from "@heroicons/react/24/outline";
-import Logo from "./assets/Logo";
-import { ArrowRightIcon, Bars3Icon } from "@heroicons/react/20/solid";
+import { motion } from "framer-motion";
 import { useState } from "react";
 import { twMerge } from "tailwind-merge";
-import { motion } from "framer-motion";
+import Logo from "./assets/Logo";
 
 type Menu = {
   id: number;

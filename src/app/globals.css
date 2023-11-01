@@ -1,6 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* 
+text-6xl (Extra Large): Font size 190px
+text-5xl (Large): Font size 96px
+text-3xl (Triple Extra Large): Font size 48px
+text-2xl (Double Extra Large): Font size 40px
+text-base (Base): Font size 24px */
 
 * {
   scroll-behavior: smooth;
@@ -34,12 +40,12 @@
   }
 
   h2 {
-    @apply capitalize text-[32px] leading-[32px] font-[500] sm:text-[40px] sm:leading-[48px] lg:text-[64px] lg:leading-[64px];
+    @apply capitalize text-[30px] leading-[32px] font-[500] sm:text-[48px] sm:leading-[48px] lg:text-[60px] lg:leading-[60px];
   }
 
   h3 {
     @apply capitalize text-[20px] leading-[26px] 
-    lg:text-[24px] lg:leading-[32px] 3xl:text-[40px] 3xl:leading-[40px];
+    lg:text-[24px] lg:leading-[24px] 3xl:text-[40px] 3xl:leading-[40px];
   }
 }
 
