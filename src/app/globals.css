@@ -45,7 +45,7 @@ text-base (Base): Font size 24px */
 
   h3 {
     @apply capitalize text-[20px] leading-[26px] 
-    lg:text-[24px] lg:leading-[24px] 3xl:text-[40px] 3xl:leading-[40px];
+    lg:text-[24px] lg:leading-[24px] 3xl:text-[32px] 3xl:leading-[32px];
   }
 }
 

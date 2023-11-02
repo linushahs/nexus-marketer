@@ -18,7 +18,7 @@ function Contact() {
         <Image
           src="/assets/contact-pic.png"
           alt="contact picture"
-          width={800}
+          width={1000}
           height={400}
           className="w-1/2"
         />
@@ -66,7 +66,7 @@ function Contact() {
 
           <button
             type="submit"
-            className="w-fit rounded-full bg-primary py-4 px-5 flex gap-4 items-center text-xl font-medium hover:bg-primary/80 cursor-pointer"
+            className="w-fit rounded-full bg-primary py-3 px-4 flex gap-4 items-center text-xl font-medium hover:bg-primary/80 cursor-pointer"
           >
             Send message now
             <ArrowUpRightIcon className="border border-black p-2 rounded-full w-9 h-9 " />
