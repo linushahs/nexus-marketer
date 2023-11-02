@@ -1,9 +1,9 @@
-import Logo from "./assets/Logo";
+import Logo from "../assets/Logo";
 
-const linkGroup = "first:mr-8 flex flex-col gap-3";
+const linkGroup = "first:mr-8 flex flex-col gap-3 mt-1";
 const linkHeadStyle = "font-medium text-xl";
 const linkStyle =
-  "text-gray-500 text-lg cursor-pointer mt-5 hover:text-white hover:underline capitalize";
+  "text-gray-400 text-lg cursor-pointer mt-5 hover:text-white hover:underline capitalize";
 
 function Footer() {
   return (
@@ -11,7 +11,7 @@ function Footer() {
       {/* left section -----------------  */}
       {/* ------------------------------ */}
       <div className="w-1/3">
-        <span className="text-secondary flex gap-2 items-center text-[36px] leading-[40px]  capitalize">
+        <span className="text-secondary flex gap-2 items-center text-[36px] leading-[24px]  capitalize">
           <Logo className="w-16 h-16" /> Nexus Marketers
         </span>
 
@@ -76,8 +76,9 @@ function Footer() {
 
         {/* discover more ----------------  */}
         <form>
-          <h4 className="text-[36px] leading-[40px] capitalize">
-            discover more - sign up <br /> for updates
+          <h4 className="text-[36px] leading-[44px] capitalize">
+            discover more - sign up <br />
+            for updates
           </h4>
 
           <input

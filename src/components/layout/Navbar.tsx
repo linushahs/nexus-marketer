@@ -5,7 +5,7 @@ import { ArrowUpRightIcon } from "@heroicons/react/24/outline";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { twMerge } from "tailwind-merge";
-import Logo from "./assets/Logo";
+import Logo from "../assets/Logo";
 
 type Menu = {
   id: number;
