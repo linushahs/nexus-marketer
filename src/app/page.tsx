@@ -9,6 +9,7 @@ import OurServices from "@/components/OurServices";
 import OurTeam from "@/components/OurTeam";
 import WorkProcess from "@/components/WorkProcess";
 import TheEndSection from "@/components/TheEndSection";
+import OurClients from "@/components/OurClients";
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
       <OurTeam />
       <OurServices />
       <WorkProcess />
+      <OurClients />
       <Contact />
       <TheEndSection />
       <Footer />
