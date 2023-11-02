@@ -3,7 +3,7 @@ import { workProcess } from "./utils/constants";
 
 function WorkProcess() {
   return (
-    <section className="container py-10  ">
+    <section id="work" className="container py-10  ">
       <h1>How do we work?</h1>
 
       <main className="flex gap-6  mt-16">

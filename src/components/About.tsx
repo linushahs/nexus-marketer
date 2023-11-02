@@ -4,7 +4,7 @@ const headingStyle = "flex-1 text-secondary font-medium";
 
 function About() {
   return (
-    <section className="container relative py-8 ">
+    <section id="about" className="container relative py-8 ">
       <h1>Who Are We</h1>
 
       <div className="flex justify-between gap-8 items-start mt-12 text-white">

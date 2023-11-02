@@ -3,12 +3,12 @@ import { services } from "./utils/constants";
 
 function OurServices() {
   return (
-    <section className="container relative py-8 ">
+    <section id="services" className="container relative py-8 ">
       <h1>our services</h1>
 
-      <div className="flex flex-col gap-8 mt-8">
+      <div className="flex flex-col gap-12 mt-8">
         {services.map((service, id: number) => (
-          <div key={id} className="sticky-container sticky top-0">
+          <div key={id} className="">
             {/* services body ----  */}
             <div className="flex flex-col bg-background">
               {/* top section ----    */}

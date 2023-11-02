@@ -45,7 +45,7 @@ function Navbar() {
             opacity: 100,
             transition: { delay: 0.2, duration: 0.8 },
           }}
-          className="navbar-menu lg:flex items-center ml-32 gap-16 hidden font-[500] text-lg 3xl:text-xl"
+          className="navbar-menu lg:flex items-center ml-32 gap-16 hidden font-[500] text-lg xl:text-xl"
         >
           <li>
             <a href="#home" className="active">
@@ -56,7 +56,7 @@ function Navbar() {
             <a href="#about">About</a>
           </li>
           <li>
-            <a href="#works">Works</a>
+            <a href="#work">Works</a>
           </li>
           <li>
             <a href="#clients">Clients</a>

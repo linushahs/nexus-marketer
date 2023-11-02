@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 function Homepage() {
   return (
-    <section className="container relative py-8">
+    <section id="home" className="container relative py-8">
       <div className="flex items-center relative">
         <motion.p
           initial={{ x: -100, opacity: 0 }}

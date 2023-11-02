@@ -39,7 +39,7 @@ function Footer() {
               <a href="#services">Services</a>
             </li>
             <li className={linkStyle}>
-              <a href="#projects">Projects</a>
+              <a href="#work">Works</a>
             </li>
             <li className={linkStyle}>
               <a href="#contact">Contact</a>

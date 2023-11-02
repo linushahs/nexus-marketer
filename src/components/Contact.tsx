@@ -7,7 +7,7 @@ const inputFieldStyle =
 
 function Contact() {
   return (
-    <section className="container py-10  ">
+    <section id="contact" className="container py-10  ">
       <h1>lets collaborate</h1>
       <h3 className="text-white mt-2">
         or email at{" "}
