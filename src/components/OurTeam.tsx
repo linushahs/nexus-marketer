@@ -2,6 +2,11 @@
 
 import Image from "next/image";
 import HorizontalSlider from "./HorizontalSlider";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import "swiper/css";
+import "swiper/css/free-mode";
+import "swiper/css/pagination";
 
 const teamInfo = [
   {
@@ -53,9 +58,20 @@ function OurTeam() {
     <section className="container py-10  ">
       <h1>our creative teams</h1>
 
-      <HorizontalSlider className="mt-12 sm:mt-16 text-white items-start rounded-none gap-x-10 sm:gap-x-12 lg:gap-x-20">
+      <Swiper
+        slidesPerView={"auto"}
+        breakpoints={{
+          // when window width is >= 640px
+          640: {
+            slidesPerView: 4,
+          },
+        }}
+        spaceBetween={30}
+        grabCursor={true}
+        className="w-full mt-12 sm:mt-16  text-white h-[300px] sm:h-[600px]"
+      >
         {teamInfo.map((member) => (
-          <div key={member.id} className="min-w-fit odd:mt-[60px]">
+          <SwiperSlide key={member.id} className=" odd:mt-[60px]">
             <Image
               alt="avatar"
               width={400}
@@ -68,12 +84,12 @@ function OurTeam() {
             <h3 className="mt-3 text-lg sm:text-xl lg:text-2xl font-[600]">
               {member.name}
             </h3>
-            <p className="capitalize text-xs sm:text-sm mt-1 text-gray-300 ">
+            <p className="capitalize sm:text-lg mt-1 text-gray-300 ">
               {member.position}
             </p>
-          </div>
+          </SwiperSlide>
         ))}
-      </HorizontalSlider>
+      </Swiper>
     </section>
   );
 }
