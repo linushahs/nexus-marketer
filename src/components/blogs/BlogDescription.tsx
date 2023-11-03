@@ -81,7 +81,10 @@ function BlogDescription() {
       {/* tags ------------------  */}
       <div className="mt-8 flex gap-4">
         {["Marketing", "Tech", "AI", "Science"].map((tag) => (
-          <span className="rounded-full bg-[#353535] text-secondary py-1.5 px-6 text-xl">
+          <span
+            key={tag}
+            className="rounded-full bg-[#353535] text-secondary py-1.5 px-6 text-xl"
+          >
             {tag}
           </span>
         ))}
