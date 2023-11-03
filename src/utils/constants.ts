@@ -45,3 +45,56 @@ export const workProcess = [
     imgSrc: "/assets/work3.png",
   },
 ];
+
+type Blog = {
+  id: number;
+  publishedDate: string;
+  title: string;
+  author: string;
+  imgSrc: string;
+};
+
+export const blogs: Blog[] = [
+  {
+    id: 1,
+    publishedDate: "2022/12/12",
+    title: "AI-Powered Marketing reshaping industry norms",
+    author: "Sharad guragain",
+    imgSrc: "/assets/blog-pic1.png",
+  },
+  {
+    id: 2,
+    publishedDate: "2022/12/12",
+    title: "AI-Powered Marketing reshaping industry norms",
+    author: "Sharad guragain",
+    imgSrc: "/assets/blog-pic1.png",
+  },
+  {
+    id: 3,
+    publishedDate: "2022/12/12",
+    title: "AI-Powered Marketing reshaping industry norms",
+    author: "Sharad guragain",
+    imgSrc: "/assets/blog-pic1.png",
+  },
+  {
+    id: 4,
+    publishedDate: "2022/12/12",
+    title: "AI-Powered Marketing reshaping industry norms",
+    author: "Sharad guragain",
+    imgSrc: "/assets/blog-pic1.png",
+  },
+  {
+    id: 5,
+    publishedDate: "2022/12/12",
+    title: "AI-Powered Marketing reshaping industry norms",
+    author: "Sharad guragain",
+    imgSrc: "/assets/blog-pic1.png",
+  },
+  {
+    id: 6,
+    publishedDate: "2022/12/12",
+    title: "AI-Powered Marketing reshaping industry norms",
+    author: "Sharad guragain",
+    imgSrc: "/assets/blog-pic1.png",
+  },
+];

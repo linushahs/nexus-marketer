@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useState, useRef } from "react";
 import { twMerge } from "tailwind-merge";
 
 interface HorizontalSliderProps {
@@ -10,15 +10,15 @@ const HorizontalSlider: React.FC<HorizontalSliderProps> = ({
   children,
   className,
 }) => {
-  let isDragStart = false,
-    prevX: number,
-    prevScrollLeft: number;
+  const [isDragStart, setIsDragStart] = useState(false);
+  const [prevX, setPrevX] = useState<number>(0);
+  const [prevScrollLeft, setPrevScrollLeft] = useState<number>(0);
   const carouselRef = useRef<HTMLDivElement>(null);
 
   const handleDragStart = (x: number) => {
-    isDragStart = true;
-    prevX = x;
-    if (carouselRef.current) prevScrollLeft = carouselRef.current?.scrollLeft;
+    setIsDragStart(true);
+    setPrevX(x);
+    if (carouselRef.current) setPrevScrollLeft(carouselRef.current.scrollLeft);
   };
 
   const handleDragMove = (x: number) => {
@@ -30,7 +30,7 @@ const HorizontalSlider: React.FC<HorizontalSliderProps> = ({
   };
 
   const handleDragEnd = () => {
-    isDragStart = false;
+    setIsDragStart(false);
   };
 
   return (
@@ -38,7 +38,6 @@ const HorizontalSlider: React.FC<HorizontalSliderProps> = ({
       ref={carouselRef}
       onMouseDown={(e) => handleDragStart(e.pageX)}
       onMouseMove={(e) => {
-        e.preventDefault();
         handleDragMove(e.pageX);
       }}
       onMouseUp={handleDragEnd}
@@ -46,9 +45,10 @@ const HorizontalSlider: React.FC<HorizontalSliderProps> = ({
       onTouchMove={(e) => handleDragMove(e.touches[0].pageX)}
       onTouchEnd={handleDragEnd}
       className={twMerge(
-        "my-8 flex items-center gap-4 overflow-x-hidden rounded-full",
+        "my-8 flex items-center gap-4 overflow-x-hidden rounded-full cursor-pointer",
         className
       )}
+      draggable={false}
     >
       {children}
     </div>

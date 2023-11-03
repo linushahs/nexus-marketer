@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { workProcess } from "./utils/constants";
+import { workProcess } from "../utils/constants";
 
 function WorkProcess() {
   return (

@@ -10,6 +10,7 @@ import OurTeam from "@/components/OurTeam";
 import WorkProcess from "@/components/WorkProcess";
 import TheEndSection from "@/components/TheEndSection";
 import OurClients from "@/components/OurClients";
+import BlogsNews from "@/components/Blogs&News";
 
 export default function Home() {
   return (
@@ -23,6 +24,7 @@ export default function Home() {
       <OurServices />
       <WorkProcess />
       <OurClients />
+      <BlogsNews />
       <Contact />
       <TheEndSection />
       <Footer />

@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import HorizontalSlider from "./utils/HorizontalSlider";
+import HorizontalSlider from "./HorizontalSlider";
 
 const teamInfo = [
   {
@@ -61,7 +61,8 @@ function OurTeam() {
               width={400}
               height={400}
               src={member.imgSrc}
-              className="w-[220px] sm:w-[280px] lg:w-[350px]"
+              className="w-[220px] cursor-pointer sm:w-[280px] lg:w-[350px]"
+              draggable={false}
             />
 
             <h3 className="mt-3 text-lg sm:text-xl lg:text-2xl font-[600]">
