@@ -80,9 +80,9 @@ function BlogsNews() {
           <div className="w-1/2 relative flex justify-end">
             <input
               type="text"
-              className="w-2/3 rounded-full py-2 px-6 text-[24px] bg-[#353535]  focus:outline-tertiary focus:ring-transparent text-gray-400"
+              className="w-2/3 rounded-full py-[9px] px-6 text-[24px] bg-[#353535]  focus:outline-tertiary focus:ring-transparent text-gray-400"
             />
-            <MagnifyingGlassIcon className="absolute inset-y-2 right-4 w-8 h-8 text-white" />
+            <MagnifyingGlassIcon className="absolute inset-y-2 right-4 w-9 h-9 text-white" />
           </div>
         </div>
       </main>
