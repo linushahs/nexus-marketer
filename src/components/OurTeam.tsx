@@ -63,27 +63,32 @@ function OurTeam() {
           // when window width is >= 640px
           640: {
             slidesPerView: 4,
+            spaceBetween: 50,
           },
         }}
         spaceBetween={30}
         grabCursor={true}
-        className="w-full mt-12 sm:mt-16  text-white h-[300px] sm:h-[600px]"
+        className="w-full mt-12 sm:mt-16  text-white h-auto sm:h-[600px]"
       >
         {teamInfo.map((member) => (
-          <SwiperSlide key={member.id} className=" odd:mt-[60px]">
+          <SwiperSlide
+            key={member.id}
+            className="
+          !w-[220px] cursor-pointer sm:!w-[280px] lg:!w-[350px] odd:mt-[60px]"
+          >
             <Image
               alt="avatar"
               width={400}
               height={400}
               src={member.imgSrc}
-              className="w-[220px] cursor-pointer sm:w-[280px] lg:w-[350px]"
+              className="w-full rounded-lg"
               draggable={false}
             />
 
             <h3 className="mt-3 text-lg sm:text-xl lg:text-2xl font-[600]">
               {member.name}
             </h3>
-            <p className="capitalize sm:text-lg mt-1 text-gray-300 ">
+            <p className="capitalize sm:text-lg mt-0.5 text-gray-300 ">
               {member.position}
             </p>
           </SwiperSlide>
