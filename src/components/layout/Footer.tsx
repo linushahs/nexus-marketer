@@ -10,7 +10,7 @@ function Footer() {
     <section className="container py-10 flex justify-between">
       {/* left section -----------------  */}
       {/* ------------------------------ */}
-      <div className="w-1/3">
+      <div className="hidden lg:block w-1/3">
         <span className="text-secondary flex gap-2 items-center text-[36px] leading-[24px]  capitalize">
           <Logo className="w-16 h-16" /> Nexus Marketers
         </span>
@@ -83,7 +83,7 @@ function Footer() {
 
           <input
             type="text"
-            className="bg-white py-2 px-3 rounded-lg mt-6 text-black w-3/4 text-lg"
+            className="bg-white py-2 px-3 rounded-lg mt-6 text-black w-full text-lg"
           />
 
           <button

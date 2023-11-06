@@ -10,7 +10,10 @@ import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
 
-const btnStyle = "py-2 rounded-full bg-[#353535] text-white px-8 text-[24px]";
+const btnStyle =
+  "py-3 px-4 w-full sm:px-8  sm:w-fit rounded-full bg-[#353535] text-white text-xl xl:text-[24px]";
+
+const blogsCategory = ["For You", "Most Popular", "Tech", "Marketing"];
 
 function BlogsNews() {
   return (
@@ -19,10 +22,13 @@ function BlogsNews() {
 
       <main className="w-full mt-10">
         <Swiper
-          slidesPerView={"auto"}
+          slidesPerView={1}
           breakpoints={{
             // when window width is >= 640px
             640: {
+              slidesPerView: 2,
+            },
+            1366: {
               slidesPerView: 3,
             },
           }}
@@ -67,8 +73,8 @@ function BlogsNews() {
         </Swiper>
 
         {/* options: and search field- -----------  */}
-        <div className="flex justify-between items-center mt-16">
-          <div className="flex gap-8">
+        <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center mt-16">
+          <div className="hidden sm:flex gap-8">
             <button className={btnStyle + " border-2 border-secondary"}>
               For You
             </button>
@@ -77,12 +83,30 @@ function BlogsNews() {
             <button className={btnStyle}>Marketing</button>
           </div>
 
-          <div className="w-1/2 relative flex justify-end">
+          {/* ---button slider for mobile responsive  */}
+          {/* ---------------------------------------- */}
+          <Swiper
+            slidesPerView={"auto"}
+            spaceBetween={20}
+            grabCursor={true}
+            className="sm:!hidden w-full  text-white h-[60px]"
+          >
+            {blogsCategory.map((category) => (
+              <SwiperSlide className="!w-[180px]" key={category}>
+                <button draggable={false} className={btnStyle}>
+                  {category}
+                </button>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+
+          <div className="hidden sm:flex lg:ml-4 xl:w-1/2 relative  justify-end">
             <input
               type="text"
-              className="w-2/3 rounded-full py-[9px] px-6 text-[24px] bg-[#353535]  focus:outline-tertiary focus:ring-transparent text-gray-400"
+              className="lg:w-full xl:w-2/3 rounded-full py-[9px] px-6 text-[24px] bg-[#353535]  focus:outline-tertiary focus:ring-transparent text-gray-400"
             />
             <MagnifyingGlassIcon className="absolute inset-y-2 right-4 w-9 h-9 text-white" />
+            S
           </div>
         </div>
       </main>

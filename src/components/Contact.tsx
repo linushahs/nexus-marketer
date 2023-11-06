@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const formLabelStyle = "text-white";
 const inputFieldStyle =
-  "w-[80%] border-b border-gray-400 bg-transparent py-2.5 text-white text-xl outline-none mt-3";
+  "w-full lg:w-[80%] border-b border-gray-400 bg-transparent py-2.5 text-white text-xl outline-none mt-3";
 
 function Contact() {
   return (
@@ -14,16 +14,16 @@ function Contact() {
         <span className="text-primary lowercase">nexusmarketers@gmail.com</span>
       </h3>
 
-      <main className="flex gap-16 mt-16">
+      <main className="flex flex-col-reverse lg:flex-row gap-16 mt-16">
         <Image
           src="/assets/contact-pic.png"
           alt="contact picture"
           width={1000}
           height={400}
-          className="w-1/2"
+          className="w-full lg:w-1/2"
         />
 
-        <form className="w-1/2 flex flex-col gap-16">
+        <form className="w-full lg:w-1/2 flex flex-col gap-12">
           <div>
             <label htmlFor="name" className={formLabelStyle}>
               <h3>
