@@ -74,7 +74,7 @@ function OurTeam() {
           <SwiperSlide
             key={member.id}
             className="
-          !w-[220px] cursor-pointer sm:!w-[280px] lg:!w-[350px] odd:mt-[60px]"
+          !w-[220px] cursor-pointer sm:!w-[280px] lg:!w-[350px] sm:odd:mt-[60px]"
           >
             <Image
               alt="avatar"

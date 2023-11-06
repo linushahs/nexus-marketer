@@ -51,7 +51,7 @@ text-base (Base): Font size 24px */
 
 @layer components {
   .container {
-    @apply px-[20px] bg-background;
+    @apply px-[14px] sm:px-[24px] lg:px-[30px] bg-background;
   }
 
   .primary-btn {

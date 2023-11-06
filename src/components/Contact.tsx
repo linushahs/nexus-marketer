@@ -9,12 +9,12 @@ function Contact() {
   return (
     <section id="contact" className="container py-10  ">
       <h1>lets collaborate</h1>
-      <h3 className="text-white mt-2">
+      <h3 className="text-white mt-3">
         or email at{" "}
         <span className="text-primary lowercase">nexusmarketers@gmail.com</span>
       </h3>
 
-      <main className="flex flex-col-reverse lg:flex-row gap-16 mt-16">
+      <main className="flex flex-col-reverse lg:flex-row gap-16 mt-10 sm:mt-16">
         <Image
           src="/assets/contact-pic.png"
           alt="contact picture"

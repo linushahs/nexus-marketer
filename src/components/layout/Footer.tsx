@@ -1,9 +1,9 @@
 import Logo from "../assets/Logo";
 
 const linkGroup = "first:mr-8 flex flex-col gap-3 mt-1";
-const linkHeadStyle = "font-medium text-xl";
+const linkHeadStyle = "font-medium text-[19px] sm:text-xl";
 const linkStyle =
-  "text-gray-400 text-lg cursor-pointer mt-5 hover:text-white hover:underline capitalize";
+  "text-gray-400 text-[17px] sm:text-lg cursor-pointer mt-5 hover:text-white hover:underline capitalize";
 
 function Footer() {
   return (
@@ -24,7 +24,7 @@ function Footer() {
 
       {/* right section ---------------  */}
       {/* ----------------------------- */}
-      <div className="text-secondary flex-1 flex flex-wrap items-start justify-between gap-y-10 sm:flex-nowrap lg:justify-end lg:gap-x-20 mt-4">
+      <div className="text-secondary flex-1 flex flex-wrap items-start justify-between gap-y-10 sm:flex-nowrap lg:justify-end lg:gap-x-20 sm:mt-4">
         {/* quick links -----------------------  */}
         <div className={linkGroup}>
           <h3 className={linkHeadStyle}>Quick links</h3>
@@ -76,7 +76,7 @@ function Footer() {
 
         {/* discover more ----------------  */}
         <form>
-          <h4 className="text-[36px] leading-[44px] capitalize">
+          <h4 className="text-[30px] leading-[36px] sm:text-[36px] sm:leading-[44px] capitalize">
             discover more - sign up <br />
             for updates
           </h4>

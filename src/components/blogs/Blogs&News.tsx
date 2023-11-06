@@ -34,7 +34,7 @@ function BlogsNews() {
           }}
           spaceBetween={30}
           grabCursor={true}
-          className="w-full h-[300px] sm:h-[450px]"
+          className="w-full h-[420px] sm:h-[450px]"
         >
           {blogs?.map((blog) => (
             <SwiperSlide
@@ -73,7 +73,7 @@ function BlogsNews() {
         </Swiper>
 
         {/* options: and search field- -----------  */}
-        <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center mt-16">
+        <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center mt-12 sm:mt-16">
           <div className="hidden sm:flex gap-8">
             <button className={btnStyle + " border-2 border-secondary"}>
               For You
