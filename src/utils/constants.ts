@@ -98,3 +98,73 @@ export const blogs: Blog[] = [
     imgSrc: "/assets/blog-pic1.png",
   },
 ];
+
+type TeamInfo = {
+  id: number;
+  name: string;
+  position: string;
+  imgSrc: string;
+};
+
+export const teamInfo: TeamInfo[] = [
+  {
+    id: 1,
+    name: "Sumit Yadav",
+    position: "C.E.O. / Co-founder",
+    imgSrc: "/assets/sumit_yadav.jpg",
+  },
+  {
+    id: 2,
+    name: "Prajwol Jung Kuwar",
+    position: "C.T.O",
+    imgSrc: "/assets/pratik_jung.jpg",
+  },
+  {
+    id: 3,
+    name: "Hritik Raj Karn",
+    position: "Project Lead",
+    imgSrc: "/assets/hrithik_karn.jpg",
+  },
+  {
+    id: 4,
+    name: "Ayusha Duwal",
+    position: "Human Resource",
+    imgSrc: "/assets/ayusha.jpg",
+  },
+  {
+    id: 5,
+    name: "Sharad Guragain",
+    position: "UI/UX designer",
+    imgSrc: "/assets/sharad_gn.jpg",
+  },
+  {
+    id: 6,
+    name: "Shivam Karn",
+    position: "Lead Mobile developer",
+    imgSrc: "/assets/shiwam_karn.jpg",
+  },
+  {
+    id: 7,
+    name: "Sunil Shah",
+    position: "Frontend Engineer",
+    imgSrc: "/assets/sunil_shah.jpg",
+  },
+  {
+    id: 8,
+    name: "Ravi Roshan Jha",
+    position: "Flutter Developer",
+    imgSrc: "/assets/ravi_jha.png",
+  },
+  {
+    id: 9,
+    name: "Bibek Gautam",
+    position: "Head backend developer",
+    imgSrc: "/assets/member-pic.png",
+  },
+  {
+    id: 10,
+    name: "Gaurav Thagunna",
+    position: "Data Analyst/ML Engineer",
+    imgSrc: "/assets/member-pic.png",
+  },
+];
