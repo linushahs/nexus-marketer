@@ -66,7 +66,7 @@ text-base (Base): Font size 24px */
   }
 
   h2 {
-    @apply capitalize text-[30px] leading-[32px] font-[500] sm:text-[48px] sm:leading-[48px] lg:text-[60px] lg:leading-[60px];
+    @apply capitalize text-[30px] leading-[32px] font-[500] sm:text-[48px] sm:leading-[48px] xl:text-[60px] xl:leading-[60px];
   }
 
   h3 {
@@ -75,7 +75,7 @@ text-base (Base): Font size 24px */
   }
 
   h4 {
-    @apply sm:text-lg xl:text-xl;
+    @apply text-lg sm:text-xl xl:text-2xl;
   }
 }
 
@@ -85,7 +85,7 @@ text-base (Base): Font size 24px */
   }
 
   .primary-btn {
-    @apply w-[340px] sm:w-[400px] text-sm sm:text-base xl:text-lg py-2.5 rounded-full bg-primary text-background flex justify-center items-center gap-3 font-medium;
+    @apply w-[340px] sm:w-[400px] text-sm sm:text-base lg:text-lg xl:text-xl py-2.5 rounded-full bg-primary text-background flex justify-center items-center gap-3 font-medium;
   }
 
   .landing-title {

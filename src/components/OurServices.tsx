@@ -10,7 +10,7 @@ function OurServices() {
     <section id="services" className="container relative py-8 ">
       <h1>our services</h1>
 
-      <h4 className="w-full lg:w-[40%] text-darkText my-6 md:leading-[30px]">
+      <h4 className="w-full lg:w-[40%] text-darkText my-6 md:leading-[32px]">
         A marketing agency is a professional entity dedicated to the art and
         science of crafting and executing comprehensive market
       </h4>
@@ -41,9 +41,12 @@ function OurServices() {
                 height={400}
                 className="rounded-md w-full"
               />
-              <div className="flex justify-between items-center text-secondary mt-4">
+              <div className="flex justify-between items-center text-secondary mt-6">
                 <h4 className="w-1/2 sm:w-fit">{service.title}</h4>
-                <a href="#" className="flex gap-3 items-center sm:text-lg">
+                <a
+                  href="#"
+                  className="flex gap-3 items-center sm:text-lg lg:text-xl"
+                >
                   Learn more{" "}
                   <ArrowUpRightIcon className="border border-secondary p-2 rounded-full w-8 h-8 " />
                 </a>

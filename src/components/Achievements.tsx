@@ -36,7 +36,7 @@ function Achievements() {
                 alt="achievement-thumbnail"
                 width={800}
                 height={300}
-                className="w-full sm:w-1/2 sm:h-[450px] lg:h-[600px]"
+                className="w-full sm:w-1/2 sm:h-[450px] xl:h-[600px]"
               />
             </div>
           </div>

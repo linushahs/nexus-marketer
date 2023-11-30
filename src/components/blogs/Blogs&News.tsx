@@ -6,7 +6,7 @@ import { twMerge } from "tailwind-merge";
 import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 
 const btnStyle =
-  "py-3 px-4 w-full sm:px-8  sm:w-fit rounded-full bg-[#353535] text-white text-xl xl:text-[24px]";
+  "py-3 px-4 w-full sm:px-6 lg:px-8  xl:w-fit rounded-full bg-[#353535] text-white sm:text-xl xl:text-[24px]";
 
 const blogsCategory = ["For You", "Most Popular", "Tech", "Marketing"];
 
@@ -15,7 +15,7 @@ function BlogsNews() {
     <section className="container relative py-8 ">
       <h1>blogs and news</h1>
 
-      <main className="w-full mt-10">
+      <main className="w-full mt-8 lg:mt-20">
         <Swiper
           slidesPerView={1}
           breakpoints={{
@@ -45,15 +45,15 @@ function BlogsNews() {
               <div className="p-6 text-white flex flex-col justify-between h-full">
                 {/* top section -----  */}
                 <div>
-                  <span className="text-lg">{blog.publishedDate}</span>
-                  <h4 className="mt-2 text-[36px] leading-[42px] capitalize">
+                  <span className="sm:text-lg">{blog.publishedDate}</span>
+                  <h4 className="mt-2 text-[26px] leading-[32px] lg:text-[36px] lg:leading-[42px] capitalize">
                     {blog.title}
                   </h4>
                 </div>
 
                 {/* bottom section ----------  */}
                 <div className="flex justify-between">
-                  <h3>By {blog.author}</h3>
+                  <h4>By {blog.author}</h4>
                   <a
                     role="link"
                     aria-disabled
@@ -68,8 +68,8 @@ function BlogsNews() {
         </Swiper>
 
         {/* options: and search field- -----------  */}
-        <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center mt-12 sm:mt-16">
-          <div className="hidden sm:flex gap-8">
+        <div className="flex flex-row gap-8 lg:justify-between mt-8 sm:mt-16">
+          <div className="hidden xl:flex gap-8">
             <button className={btnStyle + " border-2 border-secondary"}>
               For You
             </button>
@@ -84,24 +84,22 @@ function BlogsNews() {
             slidesPerView={"auto"}
             spaceBetween={20}
             grabCursor={true}
-            className="sm:!hidden w-full  text-white h-[60px]"
+            className="xl:!hidden w-full !rounded-full  text-white h-[55px] lg:h-[60px]"
           >
             {blogsCategory.map((category) => (
-              <SwiperSlide className="!w-[180px]" key={category}>
-                <button draggable={false} className={btnStyle}>
-                  {category}
-                </button>
+              <SwiperSlide className="!w-[140px] sm:!w-[190px]" key={category}>
+                <button className={btnStyle}>{category}</button>
               </SwiperSlide>
             ))}
           </Swiper>
 
-          <div className="hidden sm:flex lg:ml-4 xl:w-1/2 relative  justify-end">
+          <div className="hidden sm:flex lg:ml-4 sm:w-2/3 xl:w-1/3 relative  justify-end">
             <input
               type="text"
-              className="lg:w-full xl:w-2/3 rounded-full py-[9px] px-6 text-[24px] bg-[#353535]  focus:outline-tertiary focus:ring-transparent text-gray-400"
+              className="sm:w-full h-full rounded-full sm:py-1.5 lg:py-2 px-6 text-xl lg:text-[24px] bg-[#353535]  focus:outline-tertiary focus:ring-transparent text-gray-400"
+              placeholder="Search for blogs & news"
             />
-            <MagnifyingGlassIcon className="absolute inset-y-2 right-4 w-9 h-9 text-white" />
-            S
+            <MagnifyingGlassIcon className="absolute inset-y-2.5 right-4 w-9 h-9 text-white" />
           </div>
         </div>
       </main>

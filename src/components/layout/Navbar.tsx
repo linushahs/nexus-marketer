@@ -76,10 +76,10 @@ function Navbar() {
             opacity: 100,
             transition: { delay: 0.3, duration: 0.5 },
           }}
-          className="hidden sm:flex items-center capitalize gap-2"
+          className="hidden xl:flex items-center capitalize gap-2"
         >
           <hr className="w-14 border-tertiary" />
-          <h4>nexusmarketers@gmail.com</h4>
+          <h4 className="text-xl">nexusmarketers@gmail.com</h4>
           <ArrowUpRightIcon className="border border-secondary p-2 rounded-full w-8 h-8 " />
         </motion.div>
 
