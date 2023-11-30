@@ -1,11 +1,18 @@
+"use client";
+
+import "react-phone-input-2/lib/bootstrap.css";
 import { ArrowUpRightIcon } from "@heroicons/react/20/solid";
 import Image from "next/image";
+import { useState } from "react";
+import PhoneInput from "react-phone-input-2";
 
 const formLabelStyle = "text-white";
 const inputFieldStyle =
-  "w-full lg:w-[80%] border-b border-gray-400 bg-transparent py-2.5 text-white text-xl outline-none mt-3";
+  "!w-full lg:!w-[80%] !rounded-none !border-0 !border-b !border-gray-400 !bg-transparent !py-2.5 !text-white !text-xl !outline-none !ring-0 !mt-3 ";
 
 function Contact() {
+  const [value, setValue] = useState<any>();
+
   return (
     <section id="contact" className="container py-10  ">
       <h1>lets collaborate</h1>
@@ -38,22 +45,26 @@ function Contact() {
             />
           </div>
           <div>
-            <label htmlFor="email" className={formLabelStyle}>
+            <label htmlFor="phoneno" className={formLabelStyle}>
               <h3>
-                Email <span className="text-red-500 text-xl">*</span>
+                Phone Number <span className="text-red-500 text-xl">*</span>
               </h3>
             </label>
 
-            <input
-              type="text"
-              className={inputFieldStyle}
-              placeholder="Enter your email here"
+            <PhoneInput
+              enableSearch={true}
+              value={value}
+              country={"np"}
+              onChange={(e) => setValue(e)}
+              inputClass={inputFieldStyle}
+              dropdownClass="!bg-background !text-white !border !border-gray-400 !max-h-[280px]"
+              searchClass="search-box !rounded-md !bg-background !text-white !border !border-gray-600"
             />
           </div>
           <div>
-            <label htmlFor="services" className={formLabelStyle}>
+            <label htmlFor="description" className={formLabelStyle}>
               <h3>
-                Services <span className="text-red-500 text-xl">*</span>
+                Description <span className="text-red-500 text-xl">*</span>
               </h3>
             </label>
 
@@ -64,13 +75,13 @@ function Contact() {
             />
           </div>
 
-          <button
-            type="submit"
+          <a
+            href="mailto:shiwamkarn77@gmail.com?subject={test}&body={test description}"
             className="w-fit rounded-full bg-primary py-3 px-4 flex gap-4 items-center text-xl font-medium hover:bg-primary/80 cursor-pointer"
           >
             Send message now
             <ArrowUpRightIcon className="border border-black p-2 rounded-full w-9 h-9 " />
-          </button>
+          </a>
         </form>
       </main>
     </section>

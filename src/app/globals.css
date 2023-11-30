@@ -14,6 +14,19 @@ text-base (Base): Font size 24px */
   padding: 0;
 }
 
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #4a4a4a;
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #2b2b2b !important;
+}
+
 .navbar-menu li a.active {
   color: #75ccd7;
 }
@@ -34,6 +47,19 @@ text-base (Base): Font size 24px */
   transform: translateX(0);
 }
 
+/* //phone number input class  */
+.highlight {
+  background-color: #2b2b2b !important;
+}
+
+.country:hover {
+  background-color: #2b2b2b !important;
+}
+
+.country-list::-webkit-scrollbar {
+  display: none;
+}
+
 @layer base {
   h1 {
     @apply capitalize text-secondary font-[600] lg:font-[500] text-[42px] leading-[42px] sm:text-[7vw] sm:leading-[7vw] 3xl:text-[8.5vw] 3xl:leading-[8.5vw];
@@ -46,6 +72,10 @@ text-base (Base): Font size 24px */
   h3 {
     @apply capitalize text-[20px] leading-[26px] 
     lg:text-[24px] lg:leading-[30px] 3xl:text-[32px] 3xl:leading-[32px];
+  }
+
+  h4 {
+    @apply sm:text-lg xl:text-xl;
   }
 }
 
@@ -60,5 +90,9 @@ text-base (Base): Font size 24px */
 
   .landing-title {
     @apply capitalize text-secondary font-[600] lg:font-[500] text-[8.5vw] leading-[8.5vw] 3xl:text-[9.5vw] 3xl:leading-[9.5vw];
+  }
+
+  .search-box {
+    @apply !p-2 !border-0 !border-b !border-gray-600 !capitalize !w-full !m-0;
   }
 }

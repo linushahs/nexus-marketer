@@ -2,6 +2,10 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/free-mode";
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {

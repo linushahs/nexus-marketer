@@ -17,8 +17,8 @@ function About() {
           <div className="flex gap-4 sm:w-full absolute top-1/2 right-0 sm:left-2/3 -translate-y-1/2 ">
             <h3>01</h3>
             <h3>
-              Are we a Marketing and <br />
-              advertisement agency?
+              We are a team of creative minds dedicated to redefining marketing
+              strategies
             </h3>
           </div>
         </div>
@@ -33,8 +33,8 @@ function About() {
           <div className="flex gap-4 ">
             <h3>02</h3>
             <h3>
-              an online agency that <br />
-              promotes business?
+              We prioritize client success, creating <br /> customized campaigns
+              for success.
             </h3>
           </div>
         </div>
@@ -44,8 +44,8 @@ function About() {
         <div className="absolute sm:static flex gap-4 ">
           <h3 className="">03</h3>
           <h3 className="z-20">
-            okay how about a company <br /> that handles all your social <br />
-            media
+            Our experienced team stays ahead of <br /> the trend to deliver
+            tailored solutions.
           </h3>
         </div>
         <Image

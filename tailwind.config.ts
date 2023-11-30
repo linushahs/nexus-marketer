@@ -18,6 +18,7 @@ const config: Config = {
         card: "#1D1D1D",
         secondary: "#CCCCCC",
         tertiary: "#989898",
+        darkText: "#7b7b7b",
       },
     },
   },

@@ -3,12 +3,7 @@
 import { blogs } from "@/utils/constants";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { twMerge } from "tailwind-merge";
-
-// Import Swiper styles
 import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
-import "swiper/css";
-import "swiper/css/free-mode";
-import "swiper/css/pagination";
 
 const btnStyle =
   "py-3 px-4 w-full sm:px-8  sm:w-fit rounded-full bg-[#353535] text-white text-xl xl:text-[24px]";

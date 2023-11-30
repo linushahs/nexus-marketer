@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 function Homepage() {
   return (
-    <section id="home" className="container relative py-8">
+    <section id="home" className="container relative py-4">
       <div className="flex items-center relative">
         <motion.p
           initial={{ x: -100, opacity: 0 }}
@@ -37,11 +37,11 @@ function Homepage() {
           }}
           className="landing-title"
         >
-          Problemos <br />
+          Problem <br />
           <span className="text-primary">Solved</span>
         </motion.p>
 
-        <div className="w-full sm:w-2/3 ml-auto lg:m-0 lg:w-1/3">
+        <div className="w-full sm:w-2/3 ml-auto lg:m-0 lg:w-[38%]">
           <motion.p
             initial={{ y: -50, opacity: 0 }}
             animate={{
@@ -51,10 +51,10 @@ function Homepage() {
             }}
             className="text-tertiary mb-8 lg:my-8 xl:text-lg 3xl:text-xl"
           >
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est fugit
-            dolores, magni, itaque quis dicta asperiores omnis similique
-            excepturi voluptate ullam nam fuga soluta eveniet ducimus beatae
-            debitis. Ea, nostrum.
+            Nexus Marketers: Your digital growth partner. We craft compelling
+            websites, employ innovative strategies, and master advanced SEO for
+            elevated brand visibility and business success. Join us to amplify
+            your online presence!
           </motion.p>
 
           <motion.span

@@ -7,17 +7,17 @@ type Service = {
 export const services: Service[] = [
   {
     title: "Content and digital\n marketing",
-    imgSrc: "/assets/services1.jpg",
+    imgSrc: "/assets/service1.png",
     url: "",
   },
   {
     title: "Content and digital\n marketing",
-    imgSrc: "/assets/services2.jpg",
+    imgSrc: "/assets/service2.png",
     url: "",
   },
   {
     title: "Content and digital\n marketing",
-    imgSrc: "/assets/services3.jpg",
+    imgSrc: "/assets/service3.png",
     url: "",
   },
 ];
