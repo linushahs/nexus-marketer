@@ -11,9 +11,9 @@ function Introduction() {
         <p className="text-[17px] w-full sm:w-2/3 lg:w-1/3">
           Nexus Marketers, where creativity meets strategy to redefine brand
           narratives. Our team is driven by innovation, crafting tailored
-          solutions to amplify your brand's presence in the digital landscape.
-          From captivating content creation to data-driven campaigns, we
-          specialize in optimizing every aspect of your marketing journey and
+          solutions to amplify your brand&apos;s presence in the digital
+          landscape. From captivating content creation to data-driven campaigns,
+          we specialize in optimizing every aspect of your marketing journey and
           engage audiences across diverse platforms.
         </p>
         <p className="text-[17px] w-full sm:w-2/3 lg:w-1/3 ml-auto lg:m-0">
@@ -22,8 +22,8 @@ function Introduction() {
           dedication, and results. Our holistic approach combines cutting-edge
           technology with human-centric insights, ensuring your brand stands out
           in the digital landscape. From social media management to SEO
-          optimization, we're dedicated to elevating your brand's impact in the
-          evolving market.
+          optimization, we&apos;re dedicated to elevating your brand&apos;s
+          impact in the evolving market.
         </p>
       </div>
 
