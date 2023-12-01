@@ -60,6 +60,15 @@ text-base (Base): Font size 24px */
   display: none;
 }
 
+.search-box {
+  padding: 6px !important;
+  text-transform: capitalize;
+  width: 100% !important;
+  margin: 0 !important;
+  border: 0 !important;
+  font-size: 17px !important;
+}
+
 @layer base {
   h1 {
     @apply capitalize text-secondary font-[600] lg:font-[500] text-[42px] leading-[42px] sm:text-[7vw] sm:leading-[7vw] 3xl:text-[8.5vw] 3xl:leading-[8.5vw];
@@ -90,9 +99,5 @@ text-base (Base): Font size 24px */
 
   .landing-title {
     @apply capitalize text-secondary font-[600] lg:font-[500] text-[8.5vw] leading-[8.5vw] 3xl:text-[9.5vw] 3xl:leading-[9.5vw];
-  }
-
-  .search-box {
-    @apply !p-2 !border-0 !border-b !border-gray-600 !capitalize !w-full !m-0;
   }
 }

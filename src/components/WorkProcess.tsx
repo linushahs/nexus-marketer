@@ -6,7 +6,7 @@ function WorkProcess() {
     <section id="work" className="container py-10  ">
       <h1>How do we work?</h1>
 
-      <main className="flex flex-col gap-y-12 lg:flex-row lg:gap-6  mt-12 lg:mt-16">
+      <main className="flex flex-col gap-y-12 lg:flex-row lg:gap-6 mt-8 lg:mt-12">
         {workProcess.map((process) => (
           <div key={process.step} className="text-secondary">
             <span className="rounded-full border border-secondary px-4 py-1 sm:text-xl lg:text-lg font-bold">

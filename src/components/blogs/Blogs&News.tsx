@@ -15,7 +15,7 @@ function BlogsNews() {
     <section className="container relative py-8 ">
       <h1>blogs and news</h1>
 
-      <main className="w-full mt-8 lg:mt-20">
+      <main className="w-full mt-8 lg:mt-12">
         <Swiper
           slidesPerView={1}
           breakpoints={{

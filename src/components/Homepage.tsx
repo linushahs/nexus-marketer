@@ -4,6 +4,8 @@ import { ArrowUpRightIcon } from "@heroicons/react/20/solid";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
+const locationAndDateStyle = "sm:text-lg xl:text-xl";
+
 function Homepage() {
   return (
     <section id="home" className="container relative py-4">
@@ -85,8 +87,8 @@ function Homepage() {
         }}
         className="mt-12 lg:mt-8 mb-4 flex justify-between text-secondary lg:text-lg"
       >
-        <h4>Kathmandu, Nepal</h4>
-        <h4>2022 Nexus Marketers</h4>
+        <h5 className={locationAndDateStyle}>Kathmandu, Nepal</h5>
+        <h5 className={locationAndDateStyle}>2022 Nexus Marketers</h5>
       </motion.div>
 
       {/* thumbnail ----------  */}

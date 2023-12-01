@@ -10,8 +10,28 @@ const formLabelStyle = "text-white";
 const inputFieldStyle =
   "!w-full lg:!w-[80%] !rounded-none !border-0 !border-b !border-gray-400 !bg-transparent !py-2.5 !text-white !text-xl !outline-none !ring-0 !mt-3 ";
 
+type ContactFormInputProps = {
+  name: string;
+  phoneNumber: any;
+  description: string;
+};
+
 function Contact() {
-  const [value, setValue] = useState<any>();
+  const [formInput, setFormInput] = useState<ContactFormInputProps>({
+    name: "",
+    phoneNumber: "",
+    description: "",
+  });
+
+  const sendMailTo = (data: ContactFormInputProps) => {
+    if (!data.name || !data.description || !data.phoneNumber) {
+      return "#contact";
+    }
+
+    const bodyContent = `${data.description}%0D%0A%0D%0A${data.name}%0D%0A${data.phoneNumber}`;
+
+    return `mailto:shiwamkarn77@gmail.com?subject=test&body=${bodyContent}`;
+  };
 
   return (
     <section id="contact" className="container py-10  ">
@@ -42,6 +62,10 @@ function Contact() {
               type="text"
               className={inputFieldStyle}
               placeholder="Enter your name here"
+              value={formInput.name}
+              onChange={(e) =>
+                setFormInput({ ...formInput, name: e.target.value })
+              }
             />
           </div>
           <div>
@@ -53,12 +77,12 @@ function Contact() {
 
             <PhoneInput
               enableSearch={true}
-              value={value}
+              value={formInput.phoneNumber}
               country={"np"}
-              onChange={(e) => setValue(e)}
+              onChange={(e) => setFormInput({ ...formInput, phoneNumber: e })}
               inputClass={inputFieldStyle}
-              dropdownClass="!bg-background !text-white !border !border-gray-400 !max-h-[280px]"
-              searchClass="search-box !rounded-md !bg-background !text-white !border !border-gray-600"
+              dropdownClass="!bg-background !text-white !border !border-gray-400 !max-h-[320px]"
+              searchClass="!rounded-none !bg-background !text-white !border-0 !border-b !border-gray-400"
             />
           </div>
           <div>
@@ -72,11 +96,15 @@ function Contact() {
               type="text"
               className={inputFieldStyle}
               placeholder="Enter a brief description here"
+              value={formInput.description}
+              onChange={(e) =>
+                setFormInput({ ...formInput, description: e.target.value })
+              }
             />
           </div>
 
           <a
-            href="mailto:shiwamkarn77@gmail.com?subject={test}&body={test description}"
+            href={sendMailTo(formInput)}
             className="w-fit rounded-full bg-primary py-3 px-4 flex gap-4 items-center text-xl font-medium hover:bg-primary/80 cursor-pointer"
           >
             Send message now

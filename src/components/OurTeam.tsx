@@ -24,7 +24,7 @@ function OurTeam() {
         }}
         spaceBetween={30}
         grabCursor={true}
-        className="w-full mt-8 sm:mt-10  h-auto sm:h-[600px]"
+        className="w-full mt-8 sm:mt-12  h-auto sm:h-[600px]"
       >
         {teamInfo.map((member) => (
           <SwiperSlide

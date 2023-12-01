@@ -7,13 +7,13 @@ import Image from "next/image";
 
 function OurServices() {
   return (
-    <section id="services" className="container relative py-8 ">
-      <h1>our services</h1>
+    <section id="services" className="container relative pb-8 ">
+      <h1 className="-ml-2">our services</h1>
 
-      <h4 className="w-full lg:w-[40%] text-darkText my-6 md:leading-[32px]">
+      <h5 className="w-full lg:w-[40%] text-darkText my-6 text-xl xl:text-[22px] md:leading-[32px]">
         A marketing agency is a professional entity dedicated to the art and
         science of crafting and executing comprehensive market
-      </h4>
+      </h5>
 
       <div className="flex flex-col gap-12 mt-8">
         <Swiper
