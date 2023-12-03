@@ -16,9 +16,11 @@ function Footer() {
         </span>
 
         <p className="text-gray-400 mt-8 text-lg">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos ratione
-          quasi rerum rem, vel et eveniet quia quo blanditiis consectetur
-          obcaecati alias sapiente neque pariatur ipsum ipsa cum itaque autem.
+          Nexus Marketers, your premier marketing agency, is dedicated to
+          transforming your online presence. With expertise in crafting
+          compelling websites, pioneering innovative strategies, and
+          implementing advanced SEO tactics, we are committed to elevating your
+          brand's visibility and driving sustainable growth.
         </p>
       </div>
 
