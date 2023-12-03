@@ -20,7 +20,7 @@ function Footer() {
           transforming your online presence. With expertise in crafting
           compelling websites, pioneering innovative strategies, and
           implementing advanced SEO tactics, we are committed to elevating your
-          brand's visibility and driving sustainable growth.
+          brand&apos;s visibility and driving sustainable growth.
         </p>
       </div>
 
