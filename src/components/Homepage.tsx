@@ -68,10 +68,10 @@ function Homepage() {
             }}
             className="flex items-center gap-4"
           >
-            <button className="primary-btn">
+            <a href="#about" className="primary-btn">
               Get Started now
               <ArrowUpRightIcon className="border border-background p-1 rounded-full w-6 h-6 sm:w-8 sm:h-8 " />
-            </button>
+            </a>
             <hr className="w-full border-tertiary right-8" />
           </motion.span>
         </div>

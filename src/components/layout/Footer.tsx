@@ -88,7 +88,9 @@ function Footer() {
 
           <button
             type="submit"
-            className="mt-6 w-fit rounded-full bg-primary py-1.5 px-4 flex gap-4 items-center text-lg font-medium hover:bg-primary/80 cursor-pointer text-black"
+            className="mt-6 w-fit rounded-full bg-primary py-1.5 px-4 flex gap-4 items-center text-lg font-medium hover:bg-primary/80 cursor-pointer text-black disabled:bg-primary/50"
+            disabled
+            aria-disabled
           >
             Subscribe
           </button>

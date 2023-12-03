@@ -84,12 +84,18 @@ function Navbar() {
         </motion.div>
 
         {/* bar icon ---------  */}
-        <button
+        <motion.button
+          initial={{ y: "-100%", opacity: 0 }}
+          animate={{
+            y: 0,
+            opacity: 100,
+            transition: { delay: 0.3, duration: 0.5 },
+          }}
           onClick={() => setIsMenuOpen(true)}
           className="lg:hidden cursor-pointer"
         >
           <Bars3Icon className="w-8 h-8 text-white" />
-        </button>
+        </motion.button>
       </div>
 
       <motion.hr

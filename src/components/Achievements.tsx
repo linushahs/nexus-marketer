@@ -3,7 +3,7 @@ import "./css/achievement.css";
 
 function Achievements() {
   return (
-    <section className="container relative py-8 ">
+    <section className="container relative pt-8 pb-16">
       <h1>
         Championing <br /> Achievements, <br />{" "}
         <span className="text-primary">one milestone</span> at <br />a time

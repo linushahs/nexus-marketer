@@ -1,36 +1,44 @@
 "use client";
 
 import Image from "next/image";
-import { Swiper, SwiperSlide } from "swiper/react";
 
-import "swiper/css";
-import "swiper/css/free-mode";
-import "swiper/css/pagination";
 import { teamInfo } from "@/utils/constants";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useLayoutEffect, useRef, useState } from "react";
+
+gsap.registerPlugin(ScrollTrigger);
 
 function OurTeam() {
+  const slider = useRef<HTMLElement>(null);
+
+  useLayoutEffect(() => {
+    let ctx = gsap.context(() => {
+      let panels = gsap.utils.toArray(".team");
+      gsap.to(panels, {
+        xPercent: -100 * (panels.length - 4),
+        ease: "none",
+        scrollTrigger: {
+          trigger: slider.current,
+          pin: true,
+          scrub: 1,
+          end: () => "+=" + slider.current?.offsetWidth,
+        },
+      });
+    }, slider);
+    return () => ctx.revert();
+  });
+
   return (
-    <section className="container py-10  ">
+    <section ref={slider} className="container pt-4 pb-10  ">
       <h1>our team</h1>
 
-      <Swiper
-        slidesPerView={"auto"}
-        breakpoints={{
-          // when window width is >= 640px
-          640: {
-            slidesPerView: 4,
-            spaceBetween: 50,
-          },
-        }}
-        spaceBetween={30}
-        grabCursor={true}
-        className="w-full mt-8 sm:mt-12  h-auto sm:h-[600px]"
-      >
+      <main className="team-slider flex gap-8 pt-14 ">
         {teamInfo.map((member) => (
-          <SwiperSlide
+          <div
             key={member.id}
-            className="
-          !w-[300px] h-full cursor-pointer  lg:!w-[350px] sm:odd:mt-[60px]"
+            className="team
+          min-w-[300px] h-full cursor-pointer  lg:min-w-[350px] sm:odd:mt-[60px]"
           >
             <Image
               alt="avatar"
@@ -47,9 +55,10 @@ function OurTeam() {
             <p className="capitalize sm:text-lg mt-0.5 text-gray-300 ">
               {member.position}
             </p>
-          </SwiperSlide>
+          </div>
         ))}
-      </Swiper>
+      </main>
+      {/* </Swiper> */}
     </section>
   );
 }

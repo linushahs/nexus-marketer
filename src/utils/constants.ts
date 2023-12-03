@@ -6,17 +6,17 @@ type Service = {
 
 export const services: Service[] = [
   {
-    title: "Content and digital\n marketing",
-    imgSrc: "/assets/service1.png",
+    title: "Social media management",
+    imgSrc: "/assets/service1.jpg",
     url: "",
   },
   {
-    title: "Content and digital\n marketing",
+    title: "Search Engine Optimization (SEO) ",
     imgSrc: "/assets/service2.png",
     url: "",
   },
   {
-    title: "Content and digital\n marketing",
+    title: " Content Marketing",
     imgSrc: "/assets/service3.png",
     url: "",
   },
@@ -27,21 +27,21 @@ export const workProcess = [
     step: 1,
     title: "Research and Searching",
     description:
-      "A marketing agency is a professional entity dedicated to the art and science of crafting and executing comprehensive marketing strategies. These strat   ",
+      "We begin by diving into your brand's essence and goals.Through detailed analysis and data-driven insights, we identify opportunities and gather valuable information essential to tailor effective strategies for your brand's success",
     imgSrc: "/assets/work1.png",
   },
   {
     step: 2,
     title: "Plan and strategize",
     description:
-      "A marketing agency is a professional entity dedicated to the art and science of crafting and executing comprehensive marketing strategies. These strat   ",
+      "Next, we craft bespoke strategies aligned with your objectives. Leveraging market insights and innovative approaches, we develop comprehensive plans encompassing various digital channels to maximize your brand's impact",
     imgSrc: "/assets/work2.png",
   },
   {
     step: 3,
     title: "Execute and implement",
     description:
-      "A marketing agency is a professional entity dedicated to the art and science of crafting and executing comprehensive marketing strategies. These strat   ",
+      "With strategies in place, we meticulously execute campaigns and initiatives. Our team implements, monitors, and fine-tunes the approach, ensuring every aspect aligns with your brand identity while delivering measurable results and adapting to market dynamics.",
     imgSrc: "/assets/work3.png",
   },
 ];
