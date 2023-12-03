@@ -29,8 +29,11 @@ function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav id="home" className="relative container  z-40  text-secondary ">
-      <div className=" flex items-center justify-between pt-3 pb-4">
+    <nav
+      id="home"
+      className="relative container  z-40  text-secondary border-0"
+    >
+      <div className=" flex items-center justify-between pt-2 pb-2 lg:py-3 ">
         <motion.div
           initial={{ y: "-100%", opacity: 0 }}
           animate={{ y: 0, opacity: 100, transition: { duration: 0.5 } }}
@@ -101,25 +104,25 @@ function Navbar() {
       <motion.hr
         initial={{ y: "-100%", opacity: 0 }}
         animate={{ y: 0, opacity: 100, transition: { delay: 0.5 } }}
-        className="border-tertiary "
+        className="border-tertiary/20 "
       />
 
       {/* backdrop : black ----------- */}
       {isMenuOpen && (
         <div
           onClick={() => setIsMenuOpen(false)}
-          className="fixed top-0 left-0 w-full h-screen z-20 bg-black/30"
+          className="fixed top-0 left-0 w-full h-screen z-20 bg-black/30 pointer-events-none"
         ></div>
       )}
 
       {/* list of menus (in small devices: tab & mobile) ---->  */}
       <div
         className={twMerge(
-          "nav-menu top-0 right-0 fixed h-full w-[92%] sm:w-[60%] bg-background flex flex-col justify-between z-30",
+          "nav-menu top-0 right-0 fixed h-[100dvh] w-[90%] sm:w-[60%] bg-background flex flex-col justify-between z-30",
           isMenuOpen && "active"
         )}
       >
-        <header className="px-6 pt-6 flex w-full justify-between">
+        <header className="px-4 pt-6 flex w-full justify-between">
           <Logo className="w-10 h-10 " />
 
           <button
@@ -130,7 +133,7 @@ function Navbar() {
           </button>
         </header>
 
-        <ul className="px-6 flex-1 flex flex-col justify-center">
+        <ul className="px-4 flex-1 flex flex-col justify-center">
           {menus.map((menu) => (
             <li
               key={menu.id}
@@ -139,6 +142,7 @@ function Navbar() {
               <a
                 className="flex justify-between items-center text-white capitalize"
                 href={menu.url}
+                onClick={() => setIsMenuOpen(false)}
               >
                 {menu.title}
               </a>

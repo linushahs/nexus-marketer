@@ -79,8 +79,7 @@ function Footer() {
         {/* discover more ----------------  */}
         <form>
           <h4 className="text-[30px] leading-[36px] sm:text-[36px] sm:leading-[44px] capitalize">
-            discover more - sign up <br />
-            for updates
+            discover more - sign up for updates
           </h4>
 
           <input
@@ -90,7 +89,7 @@ function Footer() {
 
           <button
             type="submit"
-            className="mt-6 w-fit rounded-full bg-primary py-1.5 px-4 flex gap-4 items-center text-lg font-medium hover:bg-primary/80 cursor-pointer text-black disabled:bg-primary/50"
+            className="mt-6 w-fit rounded-full bg-primary py-1.5 px-4 flex gap-4 items-center text-lg font-medium hover:bg-primary/80 cursor-pointer text-black disabled:bg-primary/60"
             disabled
             aria-disabled
           >

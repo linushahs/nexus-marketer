@@ -79,7 +79,7 @@ html {
   }
 
   h2 {
-    @apply capitalize text-[30px] leading-[32px] font-[500] sm:text-[48px] sm:leading-[48px] xl:text-[60px] xl:leading-[60px];
+    @apply capitalize text-[30px] leading-[32px] font-[500] sm:text-[36px] sm:leading-[40px] xl:text-[60px] xl:leading-[60px];
   }
 
   h3 {
@@ -94,7 +94,7 @@ html {
 
 @layer components {
   .container {
-    @apply px-[14px] sm:px-[24px] lg:px-[30px] bg-background;
+    @apply px-[14px] sm:px-[24px] lg:px-[30px] bg-background border-b border-gray-700/40;
   }
 
   .primary-btn {
