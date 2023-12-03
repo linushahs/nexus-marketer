@@ -11,7 +11,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 gsap.registerPlugin(ScrollTrigger);
 
 function OurTeam() {
-  const component = useRef<HTMLElement>(null);
+  const component = useRef<HTMLDivElement>(null);
   const slider = useRef<HTMLElement>(null);
 
   useLayoutEffect(() => {
@@ -32,60 +32,50 @@ function OurTeam() {
   });
 
   return (
-    <section
-      ref={component}
-      className="container lg:h-screen py-10 lg:pt-4 lg:pb-10  "
-    >
-      <h1>our team</h1>
+    <section className="container lg:h-screen py-10 lg:pt-4 lg:pb-10  ">
+      <div ref={component}>
+        <h1>our team</h1>
 
-      <main
-        ref={slider}
-        className="hidden team-slider lg:flex gap-8 pt-14 pl-8"
-      >
-        {teamInfo.map((member) => (
-          <div
-            key={member.id}
-            className="team
+        <main
+          ref={slider}
+          className="hidden team-slider lg:flex gap-8 pt-14 pl-8"
+        >
+          {teamInfo.map((member) => (
+            <div
+              key={member.id}
+              className="team
           min-w-[300px] h-full cursor-pointer  lg:min-w-[350px]"
-          >
-            <Image
-              alt="avatar"
-              width={400}
-              height={400}
-              src={member.imgSrc}
-              className="w-full h-[450px] rounded-lg object-cover"
-              draggable={false}
-            />
+            >
+              <Image
+                alt="avatar"
+                width={400}
+                height={400}
+                src={member.imgSrc}
+                className="w-full h-[450px] rounded-lg object-cover"
+                draggable={false}
+              />
 
-            <h3 className="mt-3 text-white text-lg sm:text-xl lg:text-2xl">
-              {member.name}
-            </h3>
-            <p className="capitalize sm:text-lg mt-0.5 text-gray-300 ">
-              {member.position}
-            </p>
-          </div>
-        ))}
-      </main>
-
+              <h3 className="mt-3 text-white text-lg sm:text-xl lg:text-2xl">
+                {member.name}
+              </h3>
+              <p className="capitalize sm:text-lg mt-0.5 text-gray-300 ">
+                {member.position}
+              </p>
+            </div>
+          ))}
+        </main>
+      </div>
       {/* team slider in mobile and tablet screen -----------  */}
       <Swiper
         slidesPerView={"auto"}
-        breakpoints={{
-          // when window width is >= 640px
-          640: {
-            slidesPerView: 4,
-            spaceBetween: 30,
-          },
-        }}
-        spaceBetween={30}
+        spaceBetween={18}
         grabCursor={true}
-        className="lg:!hidden w-full mt-8 sm:mt-12  h-auto "
+        className="lg:!hidden !w-full mt-8 md:mt-12  h-auto !rounded-lg"
       >
         {teamInfo.map((member) => (
           <SwiperSlide
             key={member.id}
-            className="
-          !w-[300px] h-full cursor-pointer  "
+            className="!w-[300px]  h-full cursor-pointer  "
           >
             <Image
               alt="avatar"

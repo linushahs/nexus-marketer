@@ -168,3 +168,25 @@ export const teamInfo: TeamInfo[] = [
     imgSrc: "/assets/member-pic.png",
   },
 ];
+
+type Achievement = {
+  id: number;
+  title: string;
+  subTitle: string;
+  imgSrc: string;
+};
+
+export const achievements: Achievement[] = [
+  {
+    id: 1,
+    title: "Kalodhunga Creations",
+    subTitle: "Software Company",
+    imgSrc: "/assets/kalodhunga_thumbnail.png",
+  },
+  {
+    id: 2,
+    title: "Bonewa Web",
+    subTitle: "Audiobook, Books App",
+    imgSrc: "/assets/bonewa_thumbnail.png",
+  },
+];

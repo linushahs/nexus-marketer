@@ -1,5 +1,6 @@
 import Image from "next/image";
 import "./css/achievement.css";
+import { achievements } from "@/utils/constants";
 
 function Achievements() {
   return (
@@ -10,20 +11,17 @@ function Achievements() {
       </h1>
 
       <div className="flex flex-col gap-8 mt-8">
-        {new Array(3).fill(0).map((_, id: number) => (
+        {achievements.map(({ id, title, subTitle, imgSrc }) => (
           <div key={id} className="sticky-container sticky top-0 shadow-lg">
             {/* achievement body ----  */}
-            <div className="sticky-body p-6 sm:p-0 flex flex-col sm:flex-row rounded-lg">
+            <div className="sticky-body py-8 px-6 sm:px-4 flex flex-col sm:flex-row rounded-lg">
               {/* left section ----    */}
               <div className="w-full mb-8 sm:m-0 sm:w-1/2  flex flex-col text-white justify-center items-center rounded-lg">
                 <span className="sm:text-lg lg:text-xl py-1 px-4 rounded-full border border-secondary text-secondary capitalize">
-                  marketing and advertisement
+                  {subTitle}
                 </span>
 
-                <h2 className="text-center my-8 lg:my-12">
-                  some marketing <br /> project in recent <br />
-                  days
-                </h2>
+                <h2 className="text-center my-8 lg:my-12">{title}</h2>
 
                 <button className="sm:text-lg lg:text-xl  font-medium bg-primary rounded-full py-1.5 px-6 text-black capitalize">
                   view project
@@ -32,11 +30,11 @@ function Achievements() {
 
               {/* right section ---------  */}
               <Image
-                src="/assets/achievement-pic1.png"
+                src={imgSrc}
                 alt="achievement-thumbnail"
                 width={800}
                 height={300}
-                className="w-full sm:w-1/2 sm:h-[450px] xl:h-[600px]"
+                className="w-full sm:w-1/2 h-[200px] sm:h-[450px] xl:h-[600px] object-cover object-left-top"
               />
             </div>
           </div>

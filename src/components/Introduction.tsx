@@ -7,7 +7,7 @@ function Introduction() {
         we are nexus <br /> marketers
       </h1>
 
-      <div className="flex flex-col lg:flex-row gap-12 justify-end text-tertiary my-12">
+      <div className="flex flex-col lg:flex-row gap-4 sm:gap-12 justify-end text-tertiary my-8 sm:my-12">
         <p className="text-[17px] w-full sm:w-2/3 lg:w-1/3">
           Nexus Marketers, where creativity meets strategy to redefine brand
           narratives. Our team is driven by innovation, crafting tailored
@@ -32,7 +32,7 @@ function Introduction() {
         width={1000}
         height={500}
         alt="introduction-thumbnail"
-        className="w-full"
+        className="w-full h-[180px] rounded-md sm:h-auto"
       />
     </section>
   );

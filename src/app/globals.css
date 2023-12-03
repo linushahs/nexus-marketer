@@ -83,7 +83,7 @@ html {
   }
 
   h3 {
-    @apply capitalize text-[20px] leading-[26px] 
+    @apply capitalize text-[18px] leading-[24px] 
     lg:text-[24px] lg:leading-[30px] 3xl:text-[32px] 3xl:leading-[32px];
   }
 

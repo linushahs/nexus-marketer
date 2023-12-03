@@ -92,9 +92,9 @@ function OurServices() {
               alt="service thumbnail"
               width={600}
               height={400}
-              className="h-[300px] rounded-md w-full bg-white"
+              className="h-[230px] sm:h-[300px] rounded-lg w-full bg-white object-cover"
             />
-            <div className="flex justify-between items-center text-secondary mt-6">
+            <div className="flex justify-between items-center text-secondary mt-4">
               <h4 className="w-1/2 sm:w-fit">{service.title}</h4>
               <a
                 href="#"
