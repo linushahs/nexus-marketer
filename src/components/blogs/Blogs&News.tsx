@@ -1,9 +1,15 @@
 "use client";
 
-import { blogs } from "@/utils/constants";
+import { useState, useEffect } from "react";
+import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
+import { useRouter } from "next/navigation";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { twMerge } from "tailwind-merge";
-import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
+import { Blog } from "@/utils/interface";
+import sanityClient from "@/utils/sanityClient";
+import { convertDateFormat, fetchBlogAuthor, urlFor } from "@/utils/helpers";
+import { resolve } from "styled-jsx/macro";
+import { postGroq } from "@/utils/groq";
 
 const btnStyle =
   "py-3 px-4 w-full sm:px-6 lg:px-8  xl:w-fit rounded-full bg-[#353535] text-white sm:text-xl xl:text-[24px]";
@@ -11,64 +17,87 @@ const btnStyle =
 const blogsCategory = ["For You", "Most Popular", "Tech", "Marketing"];
 
 function BlogsNews() {
+  const [blogs, setBlogs] = useState<Blog[]>([]);
+  const router = useRouter();
+
+  useEffect(() => {
+    sanityClient.fetch(postGroq()).then(async (res) => {
+      setBlogs(res);
+    });
+  }, []);
+
   return (
     <section className="container relative py-8 ">
       <h1>blogs and news</h1>
 
       <main className="w-full mt-8 lg:mt-12">
-        <Swiper
-          slidesPerView={1}
-          breakpoints={{
-            // when window width is >= 640px
-            640: {
-              slidesPerView: 2,
-            },
-            1366: {
-              slidesPerView: 3,
-            },
-          }}
-          spaceBetween={30}
-          grabCursor={true}
-          className="w-full h-[420px] sm:h-[450px]"
-        >
-          {blogs?.map((blog) => (
-            <SwiperSlide
-              key={blog.id}
-              className={twMerge(
-                " relative rounded-md bg-cover bg-center z-30 "
-              )}
-              style={{ backgroundImage: `url(${blog.imgSrc})` }}
-            >
-              {/* black background ----  */}
-              <div className="w-full h-full absolute top-0 left-0 bg-black/20 -z-10"></div>
+        {blogs.length === 0 ? (
+          <main className="flex gap-8 w-full h-[420px] sm:h-[450px]">
+            {new Array(3).fill(0).map((_, id) => (
+              <div
+                key={id}
+                className="rounded-lg flex-1 bg-card animate-pulse "
+              ></div>
+            ))}
+          </main>
+        ) : (
+          <Swiper
+            slidesPerView={1}
+            breakpoints={{
+              // when window width is >= 640px
+              640: {
+                slidesPerView: 2,
+              },
+              1366: {
+                slidesPerView: 3,
+              },
+            }}
+            spaceBetween={30}
+            grabCursor={true}
+            className="w-full h-[420px] sm:h-[450px]"
+          >
+            {blogs?.map((blog) => (
+              <SwiperSlide
+                key={blog._id}
+                className={twMerge(
+                  " relative rounded-md bg-cover bg-center z-30 !cursor-pointer "
+                )}
+                style={{
+                  backgroundImage: `url(${blog.mainImage.asset.url})`,
+                }}
+              >
+                {/* black background ----  */}
+                <div className="w-full h-full absolute top-0 left-0 bg-black/60 -z-10"></div>
 
-              <div className="p-6 text-white flex flex-col justify-between h-full">
-                {/* top section -----  */}
-                <div>
-                  <span className="sm:text-lg">{blog.publishedDate}</span>
-                  <h4 className="mt-2 text-[26px] leading-[32px] lg:text-[36px] lg:leading-[42px] capitalize">
-                    {blog.title}
-                  </h4>
-                </div>
+                <div className="p-6 text-white flex flex-col justify-between h-full">
+                  {/* top section -----  */}
+                  <div>
+                    <span className="sm:text-lg">
+                      {convertDateFormat(blog._createdAt)}
+                    </span>
+                    <h4 className="mt-2 text-[26px] leading-[32px] lg:text-[36px] lg:leading-[42px] capitalize">
+                      {blog.title}
+                    </h4>
+                  </div>
 
-                {/* bottom section ----------  */}
-                <div className="flex justify-between">
-                  <h4>By {blog.author}</h4>
-                  <a
-                    role="link"
-                    aria-disabled
-                    className="capitalize cursor-pointer text-lg"
-                  >
-                    Read now
-                  </a>
+                  {/* bottom section ----------  */}
+                  <div className="flex justify-between">
+                    <h4>By {blog.author.name}</h4>
+                    <button
+                      onClick={() => router.push(`/blog/${blog.slug.current}`)}
+                      className="border border-gray-200 py-1 px-3 rounded-lg capitalize cursor-pointer text-lg"
+                    >
+                      Read now
+                    </button>
+                  </div>
                 </div>
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        )}
 
         {/* options: and search field- -----------  */}
-        <div className="flex flex-row gap-8 lg:justify-between mt-8 sm:mt-16">
+        <div className="flex flex-row gap-8 lg:justify-between mt-8 sm:mt-12">
           <div className="hidden xl:flex gap-8">
             <button className={btnStyle + " border-2 border-secondary"}>
               For You
