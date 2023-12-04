@@ -14,7 +14,7 @@ function About() {
             height={200}
           />
 
-          <div className="flex gap-4 sm:w-full sm:absolute sm:left-2/3 sm:-translate-y-1/2 ">
+          <div className="flex gap-4 sm:w-full sm:absolute sm:top-1/2 sm:left-2/3 sm:-translate-y-1/2 ">
             <h3>01</h3>
             <h3>
               We are a team of creative minds dedicated to redefining marketing
@@ -23,7 +23,7 @@ function About() {
           </div>
         </div>
 
-        <div className="flex ml-auto xl:m-0 flex-col gap-4 xl:pr-12">
+        <div className="flex ml-auto xl:m-0 flex-col gap-4 sm:w-1/2 lg:w-1/3 xl:pr-12">
           <Image
             src="/assets/introduction-pic2.png"
             alt="about-us"
@@ -40,8 +40,8 @@ function About() {
         </div>
       </div>
 
-      <div className="xl:pl-12 flex flex-col-reverse sm:flex-row gap-4 items-center text-white mt-12 xl:mt-8 relative">
-        <div className="flex gap-4 ">
+      <div className=" flex flex-col-reverse sm:flex-row gap-4 justify-center items-center text-white mt-12 xl:mt-12 relative">
+        <div className="flex gap-4 sm:absolute top-1/2 left-0 sm:w-1/2 lg:left-20 lg:w-1/3 sm:-translate-y-1/2">
           <h3 className="">03</h3>
           <h3 className="z-20">
             Our experienced team stays ahead of the trend to deliver tailored
@@ -53,7 +53,7 @@ function About() {
           alt="about-us"
           width={400}
           height={200}
-          className="sm:-ml-20"
+          className="lg:-ml-[25%]"
         />
       </div>
     </section>

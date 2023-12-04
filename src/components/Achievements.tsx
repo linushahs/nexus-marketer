@@ -23,7 +23,11 @@ function Achievements() {
 
                 <h2 className="text-center my-8 lg:my-12">{title}</h2>
 
-                <button className="sm:text-lg lg:text-xl  font-medium bg-primary rounded-full py-1.5 px-6 text-black capitalize">
+                <button
+                  disabled
+                  aria-disabled
+                  className="sm:text-lg lg:text-xl  font-medium bg-primary rounded-full py-1.5 px-6 text-black capitalize disabled:bg-primary/60"
+                >
                   view project
                 </button>
               </div>

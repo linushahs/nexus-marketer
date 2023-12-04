@@ -77,14 +77,14 @@ function Footer() {
         </div>
 
         {/* discover more ----------------  */}
-        <form>
+        <form className="sm:w-1/2 lg:w-[44%]">
           <h4 className="text-[30px] leading-[36px] sm:text-[36px] sm:leading-[44px] capitalize">
             discover more - sign up for updates
           </h4>
 
           <input
             type="text"
-            className="bg-white py-2 px-3 rounded-lg mt-6 text-black w-full text-lg"
+            className="bg-white py-2 px-3 rounded-lg mt-6 text-black w-[80%] text-lg"
           />
 
           <button
