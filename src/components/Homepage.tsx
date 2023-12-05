@@ -72,7 +72,7 @@ function Homepage() {
               Get Started now
               <ArrowUpRightIcon className="border border-background p-1 rounded-full w-6 h-6 sm:w-8 sm:h-8 " />
             </a>
-            <hr className="w-full border-tertiary right-8" />
+            <hr className="flex-1 border-tertiary right-8" />
           </motion.span>
         </div>
       </div>

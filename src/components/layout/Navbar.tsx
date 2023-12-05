@@ -82,7 +82,7 @@ function Navbar() {
           className="hidden xl:flex items-center capitalize gap-2"
         >
           <hr className="w-14 border-tertiary" />
-          <h4 className="text-xl">nexusmarketers@gmail.com</h4>
+          <h4 className="text-xl lowercase">info@nexusmarketers.com</h4>
           <ArrowUpRightIcon className="border border-secondary p-2 rounded-full w-8 h-8 " />
         </motion.div>
 

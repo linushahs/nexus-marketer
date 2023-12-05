@@ -161,12 +161,6 @@ export const teamInfo: TeamInfo[] = [
     position: "Head backend developer",
     imgSrc: "/assets/member-pic.png",
   },
-  {
-    id: 10,
-    name: "Gaurav Thagunna",
-    position: "Data Analyst/ML Engineer",
-    imgSrc: "/assets/member-pic.png",
-  },
 ];
 
 type Achievement = {
@@ -174,6 +168,7 @@ type Achievement = {
   title: string;
   subTitle: string;
   imgSrc: string;
+  description: string;
 };
 
 export const achievements: Achievement[] = [
@@ -181,12 +176,14 @@ export const achievements: Achievement[] = [
     id: 1,
     title: "Kalodhunga Creations",
     subTitle: "Software Company",
+    description: "",
     imgSrc: "/assets/kalodhunga_thumbnail.png",
   },
   {
     id: 2,
     title: "Bonewa Web",
     subTitle: "Audiobook, Books App",
+    description: "",
     imgSrc: "/assets/bonewa_thumbnail.png",
   },
 ];

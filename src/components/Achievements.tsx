@@ -11,7 +11,7 @@ function Achievements() {
       </h1>
 
       <div className="flex flex-col gap-8 mt-8">
-        {achievements.map(({ id, title, subTitle, imgSrc }) => (
+        {achievements.map(({ id, title, subTitle, imgSrc, description }) => (
           <div key={id} className="sticky-container sticky top-0 shadow-lg">
             {/* achievement body ----  */}
             <div className="sticky-body py-8 px-6 sm:px-4 flex flex-col sm:flex-row rounded-lg">
@@ -21,12 +21,17 @@ function Achievements() {
                   {subTitle}
                 </span>
 
-                <h2 className="text-center my-8 lg:my-12">{title}</h2>
+                <h2 className="text-center my-8">{title}</h2>
+                {/* <p className="mt-6 mb-8 text-center text-secondary w-[60%]">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Consequatur repellat obcaecati aut rerum, quibusdam fugit quo
+                  aliquid.
+                </p> */}
 
                 <button
                   disabled
                   aria-disabled
-                  className="sm:text-lg lg:text-xl  font-medium bg-primary rounded-full py-1.5 px-6 text-black capitalize disabled:bg-primary/60"
+                  className="mt-3 sm:text-lg lg:text-xl  font-medium bg-primary rounded-full py-1.5 px-6 text-black capitalize disabled:bg-primary/60"
                 >
                   view project
                 </button>

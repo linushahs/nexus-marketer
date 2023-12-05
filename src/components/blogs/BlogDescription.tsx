@@ -18,9 +18,9 @@ function BlogDescription() {
   const formatTextBlock = (body: BlogBody) => {
     if (body._type === "block") {
       if (body.style === "normal") {
-        return <Paragraph key={body._key} children={body.children} />;
+        return <Paragraph key={body._key} blogbodyChildren={body.children} />;
       } else if (body.style === "h4") {
-        return <Heading key={body._key} children={body.children} />;
+        return <Heading key={body._key} blogbodyChildren={body.children} />;
       }
     }
   };
