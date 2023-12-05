@@ -28,6 +28,12 @@ export const menus: Menu[] = [
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const handleMenuOpen = () => {
+    setIsMenuOpen(true);
+    // Disable scrolling when the menu is open
+    document.body.style.overflow = "hidden";
+  };
+
   return (
     <nav
       id="home"
@@ -94,7 +100,7 @@ function Navbar() {
             opacity: 100,
             transition: { delay: 0.3, duration: 0.5 },
           }}
-          onClick={() => setIsMenuOpen(true)}
+          onClick={() => handleMenuOpen()}
           className="lg:hidden cursor-pointer"
         >
           <Bars3Icon className="w-8 h-8 text-white" />
