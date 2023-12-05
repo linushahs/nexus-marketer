@@ -1,4 +1,7 @@
+import { about } from "@/utils/constants";
 import Image from "next/image";
+
+const paragraphStyle = "text-base xl:text-[19px] w-full sm:w-2/3 lg:w-1/3";
 
 function Introduction() {
   return (
@@ -7,24 +10,24 @@ function Introduction() {
         we are nexus <br /> marketers
       </h1>
 
-      <div className="flex flex-col lg:flex-row gap-4 sm:gap-12 justify-end text-tertiary my-8 sm:my-12">
-        <p className="text-[17px] w-full sm:w-2/3 lg:w-1/3">
-          Nexus Marketers, where creativity meets strategy to redefine brand
-          narratives. Our team is driven by innovation, crafting tailored
-          solutions to amplify your brand&apos;s presence in the digital
-          landscape. From captivating content creation to data-driven campaigns,
-          we specialize in optimizing every aspect of your marketing journey and
-          engage audiences across diverse platforms.
-        </p>
-        <p className="text-[17px] w-full sm:w-2/3 lg:w-1/3 ml-auto lg:m-0">
-          At our agency, we prioritize collaboration and client-centric
-          approaches. We build lasting partnerships through transparency,
-          dedication, and results. Our holistic approach combines cutting-edge
-          technology with human-centric insights, ensuring your brand stands out
-          in the digital landscape. From social media management to SEO
-          optimization, we&apos;re dedicated to elevating your brand&apos;s
-          impact in the evolving market.
-        </p>
+      <div className="flex flex-col lg:flex-row text-tertiary my-8 sm:my-12">
+        {/* desktop content ----------  */}
+        <div className="hidden sm:flex  justify-end gap-10 ">
+          {about.desktopText.map((obj, id) => (
+            <p key={id} className={paragraphStyle}>
+              {obj.text}
+            </p>
+          ))}
+        </div>
+
+        {/* mobile content ---------  */}
+        <div className="sm:hidden flex flex-col gap-4">
+          {about.mobileText.map((obj, id) => (
+            <p key={id} className={paragraphStyle}>
+              {obj.text}
+            </p>
+          ))}
+        </div>
       </div>
 
       <Image

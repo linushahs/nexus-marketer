@@ -38,7 +38,7 @@ function Contact() {
       <h1>lets collaborate</h1>
       <h3 className="text-white mt-3">
         or email at{" "}
-        <span className="text-primary lowercase">nexusmarketers@gmail.com</span>
+        <span className="text-primary lowercase">info@nexusmarketers.com</span>
       </h3>
 
       <main className="flex flex-col-reverse lg:flex-row gap-16 mt-10 sm:mt-16">

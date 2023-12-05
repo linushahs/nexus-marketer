@@ -37,8 +37,8 @@ function OurServices() {
         <h1 className="-ml-2">our services</h1>
 
         <h5 className="w-full lg:w-[40%] text-darkText my-6 md:text-xl xl:text-[22px] md:leading-[32px]">
-          A marketing agency is a professional entity dedicated to the art and
-          science of crafting and executing comprehensive market
+          We offer a comprehensive suite of tailored services to support your
+          business, leverage its potential, and ensure sustained growth
         </h5>
 
         <main ref={slider} className="hidden lg:flex gap-8 mt-8 pb-10 pl-8">

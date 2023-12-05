@@ -31,3 +31,41 @@ export type Blog = {
     title: string;
   }[];
 };
+
+export type Service = {
+  title: string;
+  imgSrc: string;
+  url: string;
+};
+
+export type TeamInfo = {
+  id: number;
+  name: string;
+  position: string;
+  imgSrc: string;
+};
+
+export type Achievement = {
+  id: number;
+  title: string;
+  subTitle: string;
+  imgSrc: string;
+};
+
+export type WorkProcess = {
+  step: number;
+  title: string;
+  imgSrc: string;
+  description: string;
+};
+
+export type About = {
+  mobileText: {
+    text: string;
+    style: "normal";
+  }[];
+  desktopText: {
+    text: string;
+    style: "normal";
+  }[];
+};

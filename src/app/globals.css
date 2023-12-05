@@ -8,10 +8,38 @@ text-3xl (Triple Extra Large): Font size 48px
 text-2xl (Double Extra Large): Font size 40px
 text-base (Base): Font size 24px */
 
+@font-face {
+  font-family: "SF Pro Regular";
+  src: url("../fonts/SFPRODISPLAYREGULAR.OTF");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SF Pro Bold";
+  src: url("../fonts/SFPRODISPLAYBOLD.OTF");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SF Pro Medium";
+  src: url("../fonts/SFPRODISPLAYMEDIUM.OTF");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SF Pro Thin Italic";
+  src: url("../fonts/SFPRODISPLAYTHINITALIC.OTF");
+  font-style: italic;
+}
+
 * {
   scroll-behavior: smooth;
   margin: 0;
   padding: 0;
+  font-family: "SF Pro Regular", sans-serif;
 }
 
 html {
@@ -51,6 +79,11 @@ html {
   transform: translateX(0);
 }
 
+.italic {
+  font-weight: normal;
+  font-family: "SF Pro Thin Italic", sans-serif;
+}
+
 /* //phone number input class  */
 .highlight {
   background-color: #2b2b2b !important;
@@ -75,14 +108,17 @@ html {
 
 @layer base {
   h1 {
+    font-family: "SF Pro Medium", sans-serif;
     @apply capitalize text-secondary font-[600] lg:font-[500] text-[42px] leading-[42px] sm:text-[7vw] sm:leading-[7vw] 3xl:text-[8.5vw] 3xl:leading-[8.5vw];
   }
 
   h2 {
+    font-family: "SF Pro Medium", sans-serif;
     @apply capitalize text-[30px] leading-[32px] font-[500] sm:text-[36px] sm:leading-[40px] xl:text-[60px] xl:leading-[60px];
   }
 
   h3 {
+    font-family: "SF Pro Regular", sans-serif;
     @apply capitalize text-[18px] leading-[24px] 
     lg:text-[24px] lg:leading-[30px] 3xl:text-[32px] 3xl:leading-[32px];
   }
@@ -98,7 +134,8 @@ html {
   }
 
   .primary-btn {
-    @apply px-4 text-sm sm:text-base lg:text-lg xl:text-xl py-2.5  rounded-full bg-primary text-background flex justify-center items-center gap-3 font-medium;
+    font-family: "SF Pro Medium", sans-serif;
+    @apply px-4 text-base lg:text-lg xl:text-xl py-2.5  rounded-full bg-primary text-background flex justify-center items-center gap-3;
   }
 
   .landing-title {

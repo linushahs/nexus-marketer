@@ -15,11 +15,11 @@
 }
 
 .sticky-container:nth-child(1) .sticky-body {
-  background-color: #1d1d1d;
+  background-color: #91a16a;
 }
 
 .sticky-container:nth-child(2) .sticky-body {
-  background-color: #232323;
+  background-color: #6aa18d;
 }
 
 .sticky-container:nth-child(3) .sticky-body {

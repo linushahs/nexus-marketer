@@ -51,7 +51,7 @@ function Homepage() {
               opacity: 100,
               transition: { delay: 1.2, duration: 1 },
             }}
-            className="text-tertiary mb-8 lg:my-8 xl:text-lg 3xl:text-xl"
+            className="text-tertiary mb-8 lg:my-8 xl:text-xl 3xl:text-xl"
           >
             Nexus Marketers: Your digital growth partner. We craft compelling
             websites, employ innovative strategies, and master advanced SEO for

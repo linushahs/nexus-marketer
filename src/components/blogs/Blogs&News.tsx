@@ -27,16 +27,16 @@ function BlogsNews() {
   }, []);
 
   return (
-    <section className="container relative py-8 ">
+    <section id="blogs" className="container relative py-8 ">
       <h1>blogs and news</h1>
 
       <main className="w-full mt-8 lg:mt-12">
         {blogs.length === 0 ? (
-          <main className="flex gap-8 w-full h-[420px] sm:h-[450px]">
+          <main className="flex gap-6 overflow-hidden w-full h-[420px] sm:h-[450px]">
             {new Array(3).fill(0).map((_, id) => (
               <div
                 key={id}
-                className="rounded-lg flex-1 bg-card animate-pulse "
+                className="rounded-lg min-w-[360px] sm:flex-1 bg-card animate-pulse "
               ></div>
             ))}
           </main>
@@ -81,10 +81,12 @@ function BlogsNews() {
                   </div>
 
                   {/* bottom section ----------  */}
-                  <div className="flex justify-between">
+                  <div className="flex justify-between items-center">
                     <h4>By {blog.author.name}</h4>
                     <button
-                      onClick={() => router.push(`/blog/${blog.slug.current}`)}
+                      onClick={() =>
+                        router.replace(`/blog/${blog.slug.current}`)
+                      }
                       className="border border-gray-200 py-1 px-3 rounded-lg capitalize cursor-pointer text-lg"
                     >
                       Read now

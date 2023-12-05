@@ -1,8 +1,68 @@
-type Service = {
-  title: string;
-  imgSrc: string;
-  url: string;
+import {
+  About,
+  Achievement,
+  Service,
+  TeamInfo,
+  WorkProcess,
+} from "./interface";
+
+export const about: About = {
+  mobileText: [
+    {
+      text: "Ready to elevate your online presence, maximize your business reach, or outshine all your competitors? Our dream team is here to ensure, each step of your business journey marks excellence.",
+      style: "normal",
+    },
+    {
+      text: "We provide you with an exceptional experience through transparent efforts and our motto of affordability without compromise. Feel free to check out our services section for more information.",
+      style: "normal",
+    },
+  ],
+  desktopText: [
+    {
+      text: "Ready to elevate your online presence, maximize your business reach, or outshine all your competitors? We have got you covered. Our dream team, a powerhouse of experts from all professions, is on a mission to take your business to new heights. We understand the difficult journey toward a successful online business. But hey, who says everything needs to be complex because your journey can surely be much more exciting.",
+      style: "normal",
+    },
+    {
+      text: "Being a business ourselves, we prioritize client trust and satisfaction over everything else. Thus, we keep our efforts transparent, prices affordable, and results outstanding. Feel free to look forward to an amazing experience with us. Our motto of affordability without comprise seeks to help businesses like yours stand out in the digital landscape. Also, check out our services section for a more comprehensive description.",
+      style: "normal",
+    },
+  ],
 };
+
+export const blogs = [
+  {
+    id: 1,
+    title: "Where Curiosity Meets Clarity: Navi gating the World of Ideas",
+    publishedDate: "2022.12.12",
+    author: "Sunil Shah",
+    imgSrc: "/service1.png",
+    thumbnailSrc: "/service1.png",
+  },
+  {
+    id: 2,
+    title: "Where Curiosity Meets Clarity: Navi gating the World of Ideas",
+    publishedDate: "2022.12.12",
+    author: "Sunil Shah",
+    imgSrc: "/service1.png",
+    thumbnailSrc: "/service1.png",
+  },
+  {
+    id: 3,
+    title: "Where Curiosity Meets Clarity: Navi gating the World of Ideas",
+    publishedDate: "2022.12.12",
+    author: "Sunil Shah",
+    imgSrc: "/service1.png",
+    thumbnailSrc: "/service1.png",
+  },
+  {
+    id: 4,
+    title: "Where Curiosity Meets Clarity: Navi gating the World of Ideas",
+    publishedDate: "2022.12.12",
+    author: "Sunil Shah",
+    imgSrc: "/service1.png",
+    thumbnailSrc: "/service1.png",
+  },
+];
 
 export const services: Service[] = [
   {
@@ -22,7 +82,7 @@ export const services: Service[] = [
   },
 ];
 
-export const workProcess = [
+export const workProcess: WorkProcess[] = [
   {
     step: 1,
     title: "Research and Searching",
@@ -45,66 +105,6 @@ export const workProcess = [
     imgSrc: "/assets/work3.png",
   },
 ];
-
-type Blog = {
-  id: number;
-  publishedDate: string;
-  title: string;
-  author: string;
-  imgSrc: string;
-};
-
-export const blogs: Blog[] = [
-  {
-    id: 1,
-    publishedDate: "2022/12/12",
-    title: "AI-Powered Marketing reshaping industry norms",
-    author: "Sharad guragain",
-    imgSrc: "/assets/blog-pic1.png",
-  },
-  {
-    id: 2,
-    publishedDate: "2022/12/12",
-    title: "AI-Powered Marketing reshaping industry norms",
-    author: "Sharad guragain",
-    imgSrc: "/assets/blog-pic1.png",
-  },
-  {
-    id: 3,
-    publishedDate: "2022/12/12",
-    title: "AI-Powered Marketing reshaping industry norms",
-    author: "Sharad guragain",
-    imgSrc: "/assets/blog-pic1.png",
-  },
-  {
-    id: 4,
-    publishedDate: "2022/12/12",
-    title: "AI-Powered Marketing reshaping industry norms",
-    author: "Sharad guragain",
-    imgSrc: "/assets/blog-pic1.png",
-  },
-  {
-    id: 5,
-    publishedDate: "2022/12/12",
-    title: "AI-Powered Marketing reshaping industry norms",
-    author: "Sharad guragain",
-    imgSrc: "/assets/blog-pic1.png",
-  },
-  {
-    id: 6,
-    publishedDate: "2022/12/12",
-    title: "AI-Powered Marketing reshaping industry norms",
-    author: "Sharad guragain",
-    imgSrc: "/assets/blog-pic1.png",
-  },
-];
-
-type TeamInfo = {
-  id: number;
-  name: string;
-  position: string;
-  imgSrc: string;
-};
 
 export const teamInfo: TeamInfo[] = [
   {
@@ -159,31 +159,24 @@ export const teamInfo: TeamInfo[] = [
     id: 9,
     name: "Bibek Gautam",
     position: "Head backend developer",
-    imgSrc: "/assets/member-pic.png",
+    imgSrc: "/assets/bibek_gautam.jpg",
   },
 ];
-
-type Achievement = {
-  id: number;
-  title: string;
-  subTitle: string;
-  imgSrc: string;
-  description: string;
-};
 
 export const achievements: Achievement[] = [
   {
     id: 1,
-    title: "Kalodhunga Creations",
-    subTitle: "Software Company",
-    description: "",
+    title:
+      "Kalodhunga Creations: <i class='italic'>Shaping The World</i> With A Diverse IT Approach",
+    subTitle: "Software Service Company",
     imgSrc: "/assets/kalodhunga_thumbnail.png",
   },
   {
     id: 2,
-    title: "Bonewa Web",
-    subTitle: "Audiobook, Books App",
-    description: "",
+    title:
+      "Bonewa Web: <i class='italic'>A Readers Hub</i> For Engaging Book Summaries",
+    subTitle: "Book/Audiobook Summary Platform",
+
     imgSrc: "/assets/bonewa_thumbnail.png",
   },
 ];
