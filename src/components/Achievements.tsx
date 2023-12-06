@@ -44,8 +44,9 @@ function Achievements() {
               <Image
                 src={imgSrc}
                 alt="achievement-thumbnail"
-                width={800}
-                height={300}
+                width={1000}
+                height={600}
+                loading="lazy"
                 className="rounded-lg sm:rounded-none sm:rounded-tr-lg sm:rounded-br-lg  w-full ml-auto sm:w-[45%] lg:w-1/2 h-[200px] sm:h-[450px] xl:h-[600px] object-cover object-left-top"
               />
             </div>

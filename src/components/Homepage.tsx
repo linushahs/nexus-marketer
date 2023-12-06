@@ -8,7 +8,7 @@ const locationAndDateStyle = "sm:text-lg xl:text-xl";
 
 function Homepage() {
   return (
-    <section id="home" className="container relative py-4">
+    <section id="home" className="container relative pt-4 pb-8">
       <div className="flex items-center relative">
         <motion.p
           initial={{ x: -100, opacity: 0 }}
@@ -24,7 +24,7 @@ function Homepage() {
         <motion.hr
           initial={{ y: "-100%", opacity: 0 }}
           animate={{ y: 0, opacity: 100, transition: { delay: 1 } }}
-          className="absolute top-1/2 right-0 w-[15%] sm:w-[20%] lg:w-[25%] 3xl:w-[15%] border-tertiary"
+          className="absolute top-1/2 right-0 flex-1 w-[15%] sm:w-[20%] lg:w-[32%] 3xl:w-[20%] border-tertiary"
         />
       </div>
 
