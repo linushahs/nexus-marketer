@@ -36,7 +36,7 @@ function OurServices() {
       >
         <h1 className="-ml-2">our services</h1>
 
-        <h5 className="w-full lg:w-[40%] text-darkText my-6 md:text-xl xl:text-[22px] md:leading-[32px]">
+        <h5 className="w-full lg:w-1/2 xl:w-[40%] text-darkText my-6 md:text-xl xl:text-[22px] md:leading-[32px]">
           We offer a comprehensive suite of tailored services to support your
           business, leverage its potential, and ensure sustained growth
         </h5>

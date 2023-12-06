@@ -1,15 +1,14 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
-import { useRouter } from "next/navigation";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { twMerge } from "tailwind-merge";
+import { postGroq } from "@/utils/groq";
+import { convertDateFormat } from "@/utils/helpers";
 import { Blog } from "@/utils/interface";
 import sanityClient from "@/utils/sanityClient";
-import { convertDateFormat, fetchBlogAuthor, urlFor } from "@/utils/helpers";
-import { resolve } from "styled-jsx/macro";
-import { postGroq } from "@/utils/groq";
+import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
+import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { twMerge } from "tailwind-merge";
 
 const btnStyle =
   "py-3 px-4 w-full sm:px-6 lg:px-8  xl:w-fit rounded-full bg-[#353535] text-white sm:text-xl xl:text-[24px]";
@@ -60,14 +59,14 @@ function BlogsNews() {
               <SwiperSlide
                 key={blog._id}
                 className={twMerge(
-                  " relative rounded-md bg-cover bg-center z-30 !cursor-pointer "
+                  " relative rounded-lg bg-cover bg-center z-30 !cursor-pointer "
                 )}
                 style={{
                   backgroundImage: `url(${blog.mainImage.asset.url})`,
                 }}
               >
                 {/* black background ----  */}
-                <div className="w-full h-full absolute top-0 left-0 bg-black/60 -z-10"></div>
+                <div className="w-full h-full absolute top-0 left-0 bg-black/70 -z-10"></div>
 
                 <div className="p-6 text-white flex flex-col justify-between h-full">
                   {/* top section -----  */}
@@ -84,9 +83,7 @@ function BlogsNews() {
                   <div className="flex justify-between items-center">
                     <h4>By {blog.author.name}</h4>
                     <button
-                      onClick={() =>
-                        router.replace(`/blog/${blog.slug.current}`)
-                      }
+                      onClick={() => router.push(`/blog/${blog.slug.current}`)}
                       className="border border-gray-200 py-1 px-3 rounded-lg capitalize cursor-pointer text-lg"
                     >
                       Read now
@@ -99,7 +96,7 @@ function BlogsNews() {
         )}
 
         {/* options: and search field- -----------  */}
-        <div className="flex flex-row gap-8 lg:justify-between mt-8 sm:mt-12">
+        <div className="flex flex-row gap-8 lg:justify-between mb-2 mt-8 sm:mt-12">
           <div className="hidden xl:flex gap-8">
             <button className={btnStyle + " border-2 border-secondary"}>
               For You

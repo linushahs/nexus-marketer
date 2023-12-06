@@ -3,7 +3,7 @@
 import "react-phone-input-2/lib/bootstrap.css";
 import { ArrowUpRightIcon } from "@heroicons/react/20/solid";
 import Image from "next/image";
-import { useState } from "react";
+import { FormEvent, useState } from "react";
 import PhoneInput from "react-phone-input-2";
 
 const formLabelStyle = "text-white";
@@ -33,12 +33,22 @@ function Contact() {
     return `mailto:shiwamkarn77@gmail.com?subject=test&body=${bodyContent}`;
   };
 
+  const handleFormSubmit = (e: FormEvent) => {
+    e.preventDefault();
+    console.log("message sent");
+  };
+
   return (
     <section id="contact" className="container py-10  ">
       <h1>lets collaborate</h1>
       <h3 className="text-white mt-3">
         or email at{" "}
-        <span className="text-primary lowercase">info@nexusmarketers.com</span>
+        <a
+          href="mailto:info@nexusmarketers.com?subject=Write your concerns"
+          className="text-primary lowercase"
+        >
+          info@nexusmarketers.com
+        </a>
       </h3>
 
       <main className="flex flex-col-reverse lg:flex-row gap-16 mt-10 sm:mt-16">
@@ -50,7 +60,10 @@ function Contact() {
           className="w-full lg:w-1/2"
         />
 
-        <form className="w-full lg:w-1/2 flex flex-col gap-12">
+        <form
+          onSubmit={handleFormSubmit}
+          className="w-full lg:w-1/2 flex flex-col gap-12"
+        >
           <div>
             <label htmlFor="name" className={formLabelStyle}>
               <h3>
@@ -66,6 +79,7 @@ function Contact() {
               onChange={(e) =>
                 setFormInput({ ...formInput, name: e.target.value })
               }
+              required
             />
           </div>
           <div>
@@ -100,16 +114,17 @@ function Contact() {
               onChange={(e) =>
                 setFormInput({ ...formInput, description: e.target.value })
               }
+              required
             />
           </div>
 
-          <a
-            href={sendMailTo(formInput)}
+          <button
+            type="submit"
             className="w-fit rounded-full bg-primary py-3 px-4 flex gap-4 items-center text-xl font-medium hover:bg-primary/80 cursor-pointer"
           >
             Send message now
             <ArrowUpRightIcon className="border border-black p-2 rounded-full w-9 h-9 " />
-          </a>
+          </button>
         </form>
       </main>
     </section>

@@ -5,7 +5,7 @@ const headingStyle = "text-[28px] leading-[34px] text-white";
 
 function PopularBlogs() {
   return (
-    <aside className="bg-lightBackground rounded-lg px-6 py-8 w-[40%] mt-[180px]">
+    <aside className="bg-card rounded-lg px-6 py-8 w-[40%] mt-[180px]">
       {/* search bar ----------------  */}
       <form className="flex gap-3 text-lg">
         <input
@@ -31,14 +31,14 @@ function PopularBlogs() {
             .map((blog) => (
               <div
                 key={blog.id}
-                className="bg-background text-white flex gap-4 rounded-lg p-4"
+                className="bg-lightBackground text-white flex gap-4 rounded-lg p-4"
               >
                 <Image
-                  src={blog.imgSrc}
+                  src={"/assets/service1.jpg"}
                   alt="blog poster"
                   width={150}
                   height={160}
-                  className="rounded-lg"
+                  className="rounded-lg w-1/4 h-[110px] object-cover"
                 />
 
                 <div className=" flex flex-col justify-between">

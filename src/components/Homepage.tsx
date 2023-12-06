@@ -106,7 +106,7 @@ function Homepage() {
           width={1000}
           height={200}
           priority={true}
-          className="w-full"
+          className="w-full rounded-lg"
         />
       </motion.div>
     </section>

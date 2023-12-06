@@ -33,25 +33,25 @@ function OurTeam() {
 
   return (
     <section className="container ">
-      <div ref={component} className="lg:h-screen py-10 lg:pt-8 lg:pb-10  ">
+      <div ref={component} className="lg:h-screen py-10 lg:py-6   ">
         <h1>our team</h1>
 
         <main
           ref={slider}
-          className="hidden team-slider lg:flex gap-8 pt-14 pl-8"
+          className="hidden team-slider lg:flex gap-8 pt-10 pl-8"
         >
           {teamInfo.map((member) => (
             <div
               key={member.id}
               className="team
-          min-w-[300px] h-full cursor-pointer  lg:min-w-[350px]"
+          min-w-[300px] cursor-pointer  lg:min-w-[22%]"
             >
               <Image
                 alt="avatar"
                 width={400}
                 height={400}
                 src={member.imgSrc}
-                className="w-full h-[450px] rounded-lg object-cover"
+                className="w-full h-[55%] rounded-lg object-cover"
                 draggable={false}
               />
 
