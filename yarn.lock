@@ -1810,7 +1810,7 @@
     lodash "^4.17.21"
     object-inspect "^1.6.0"
 
-"@sanity/types@3.21.0":
+"@sanity/types@3.21.0", "@sanity/types@^3.21.0":
   version "3.21.0"
   resolved "https://registry.yarnpkg.com/@sanity/types/-/types-3.21.0.tgz#95f481bdff2934cbc7d14d01f7980d97f5b0e623"
   integrity sha512-Aafv7gnOQ28kiECutHKFNkui6liElSC4aGZHTqT4GOablU9yhVvUpP0Ipgz0aQpKyn2L/aod/XnvdtmBSpzfFQ==
