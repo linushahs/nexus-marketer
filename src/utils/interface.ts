@@ -69,3 +69,9 @@ export type About = {
     style: "normal";
   }[];
 };
+
+export type ContactFormInputProps = {
+  name: string;
+  phoneNumber: any;
+  description: string;
+};

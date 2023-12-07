@@ -1,27 +1,30 @@
 "use client";
 
 import "react-phone-input-2/lib/bootstrap.css";
-import { ArrowUpRightIcon } from "@heroicons/react/20/solid";
+import { ArrowUpRightIcon, CheckCircleIcon } from "@heroicons/react/20/solid";
 import Image from "next/image";
 import { FormEvent, useState } from "react";
 import PhoneInput from "react-phone-input-2";
+import { ArrowPathIcon } from "@heroicons/react/24/outline";
+import axios from "axios";
+import { ContactFormInputProps } from "@/utils/interface";
 
 const formLabelStyle = "text-white";
 const inputFieldStyle =
   "!w-full lg:!w-[80%] !rounded-none !border-0 !border-b !border-gray-400 !bg-transparent !py-2.5 !text-white !text-xl !outline-none !ring-0 !mt-3 ";
 
-type ContactFormInputProps = {
-  name: string;
-  phoneNumber: any;
-  description: string;
+const initialFormInput = {
+  name: "",
+  phoneNumber: "",
+  description: "",
 };
 
 function Contact() {
-  const [formInput, setFormInput] = useState<ContactFormInputProps>({
-    name: "",
-    phoneNumber: "",
-    description: "",
-  });
+  const [formInput, setFormInput] =
+    useState<ContactFormInputProps>(initialFormInput);
+  const [isLoading, setLoading] = useState(false);
+  // const [isError, setIsError] = useState("");
+  const [isSuccess, setIsSuccess] = useState(false);
 
   const sendMailTo = (data: ContactFormInputProps) => {
     if (!data.name || !data.description || !data.phoneNumber) {
@@ -33,13 +36,40 @@ function Contact() {
     return `mailto:shiwamkarn77@gmail.com?subject=test&body=${bodyContent}`;
   };
 
-  const handleFormSubmit = (e: FormEvent) => {
+  const handleFormSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    console.log("message sent");
+
+    setLoading(true);
+    const apiUrl = "https://newsletter.kalodhunga.com/v1/contact/";
+    const requestBody = {
+      name: formInput.name,
+      phone_number: formInput.phoneNumber,
+      description: formInput.description,
+      application: "Nexus Marketers",
+    };
+
+    await axios
+      .post(apiUrl, requestBody)
+      .then((res) => {
+        setIsSuccess(true);
+
+        //setTimeout for success message
+        setTimeout(() => {
+          setIsSuccess(false);
+          setFormInput(initialFormInput);
+        }, 3500);
+
+        setLoading(false);
+        console.log(res);
+      })
+      .catch((err) => {
+        setLoading(false);
+        console.log(err);
+      });
   };
 
   return (
-    <section id="contact" className="container py-10  ">
+    <section id="contact" className="container pt-6 pb-10 ">
       <h1>lets collaborate</h1>
       <h3 className="text-white mt-3">
         or email at{" "}
@@ -51,7 +81,7 @@ function Contact() {
         </a>
       </h3>
 
-      <main className="flex flex-col-reverse lg:flex-row gap-16 mt-10 sm:mt-16">
+      <main className="flex flex-col-reverse lg:flex-row gap-16 mt-10 lg:mt-14">
         <Image
           src="/assets/contact-pic.png"
           alt="contact picture"
@@ -60,6 +90,8 @@ function Contact() {
           className="w-full lg:w-1/2"
         />
 
+        {/* Contact form: name, description, phone number ---------  */}
+        {/* ----------------------------------------- */}
         <form
           onSubmit={handleFormSubmit}
           className="w-full lg:w-1/2 flex flex-col gap-12"
@@ -120,10 +152,15 @@ function Contact() {
 
           <button
             type="submit"
-            className="w-fit rounded-full bg-primary py-3 px-4 flex gap-4 items-center text-xl font-medium hover:bg-primary/80 cursor-pointer"
+            className="w-fit rounded-full bg-primary py-3 px-4 flex gap-3 items-center text-xl font-medium hover:bg-primary/80 cursor-pointer disabled:bg-primary/60"
+            disabled={isLoading || isSuccess}
           >
-            Send message now
-            <ArrowUpRightIcon className="border border-black p-2 rounded-full w-9 h-9 " />
+            {isSuccess ? "Message sent" : "Send message now"}
+            {isSuccess && <CheckCircleIcon className="w-9 h-9 text-black/80" />}
+            {!(isSuccess || isLoading) && (
+              <ArrowUpRightIcon className="border border-black p-2 rounded-full w-9 h-9 " />
+            )}
+            {isLoading && <ArrowPathIcon className="w-7 h-7 animate-spin" />}
           </button>
         </form>
       </main>

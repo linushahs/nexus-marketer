@@ -24,31 +24,8 @@ export function urlFor(source: string) {
   return builder.image(source);
 }
 
-//fetch author of specific blog
-export const fetchBlogAuthor = async (res: Blog[]): Promise<Blog[]> => {
-  const authorPromises = res.map((blog) => {
-    return sanityClient.fetch(
-      `*[_type == 'author' && _id == "${blog.author._ref}"]   {
-        _id,
-        name,
-        bio,
-        slug{current},
-        image{asset{_ref}}
-      }`
-    );
-  });
-
-  try {
-    const authorResponses = await Promise.all(authorPromises);
-
-    // Map the blog and author details
-    const updatedBlogs = res.map((blog, index) => {
-      return { ...blog, author: authorResponses[index][0] };
-    });
-
-    return updatedBlogs;
-  } catch (err) {
-    console.log(err);
-    return [];
-  }
-};
+//validate email
+export function validateEmail(email: string) {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
+}

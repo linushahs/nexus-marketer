@@ -6,7 +6,7 @@ import {
   WorkProcess,
 } from "./interface";
 
-export const about: About = {
+const about: About = {
   mobileText: [
     {
       text: "Ready to elevate your online presence, maximize your business reach, or outshine all your competitors? Our dream team is here to ensure, each step of your business journey marks excellence.",
@@ -29,7 +29,7 @@ export const about: About = {
   ],
 };
 
-export const blogs = [
+const blogs = [
   {
     id: 1,
     title: "Where Curiosity Meets Clarity: Navi gating the World of Ideas",
@@ -64,7 +64,7 @@ export const blogs = [
   },
 ];
 
-export const services: Service[] = [
+const services: Service[] = [
   {
     title: "Social media management",
     imgSrc: "/assets/service1.jpg",
@@ -82,7 +82,7 @@ export const services: Service[] = [
   },
 ];
 
-export const workProcess: WorkProcess[] = [
+const workProcess: WorkProcess[] = [
   {
     step: 1,
     title: "Research and Searching",
@@ -106,7 +106,7 @@ export const workProcess: WorkProcess[] = [
   },
 ];
 
-export const teamInfo: TeamInfo[] = [
+const teamInfo: TeamInfo[] = [
   {
     id: 1,
     name: "Sumit Yadav",
@@ -163,7 +163,7 @@ export const teamInfo: TeamInfo[] = [
   },
 ];
 
-export const achievements: Achievement[] = [
+const achievements: Achievement[] = [
   {
     id: 1,
     title:
@@ -180,3 +180,8 @@ export const achievements: Achievement[] = [
     imgSrc: "/assets/bonewa_thumbnail.png",
   },
 ];
+
+const footerContent =
+  "Nexus Marketers, your premier marketing agency, is dedicated to        transforming your online presence. With expertise in crafting          compelling websites, pioneering innovative strategies, and          implementing advanced SEO tactics, we are committed to elevating your          brand&apos;s visibility and driving sustainable growth.";
+
+export { footerContent, about, services, workProcess, teamInfo, achievements };
