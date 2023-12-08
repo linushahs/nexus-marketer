@@ -133,12 +133,6 @@ const teamInfo: TeamInfo[] = [
     imgSrc: "/assets/pratik_jung.jpg",
   },
   {
-    id: 3,
-    name: "Hritik Raj Karn",
-    position: "Project Lead",
-    imgSrc: "/assets/hrithik_karn.jpg",
-  },
-  {
     id: 4,
     name: "Ayusha Duwal",
     position: "Human Resource",
@@ -152,7 +146,7 @@ const teamInfo: TeamInfo[] = [
   },
   {
     id: 6,
-    name: "Shivam Karn",
+    name: "Shiwam Karn",
     position: "Lead Mobile developer",
     imgSrc: "/assets/shiwam_karn.jpg",
   },
