@@ -19,7 +19,7 @@ const initialFormInput = {
   description: "",
 };
 
-function Contact() {
+export function Contact() {
   const [formInput, setFormInput] =
     useState<ContactFormInputProps>(initialFormInput);
   const [isLoading, setLoading] = useState(false);
@@ -167,5 +167,3 @@ function Contact() {
     </section>
   );
 }
-
-export default Contact;

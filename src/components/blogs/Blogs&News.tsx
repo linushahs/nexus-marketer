@@ -15,7 +15,7 @@ const btnStyle =
 
 const blogsCategory = ["For You", "Most Popular", "Tech", "Marketing"];
 
-function BlogsNews() {
+export function BlogsNews() {
   const [blogs, setBlogs] = useState<Blog[]>([]);
   const router = useRouter();
 
@@ -134,5 +134,3 @@ function BlogsNews() {
     </section>
   );
 }
-
-export default BlogsNews;

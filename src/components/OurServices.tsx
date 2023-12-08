@@ -7,7 +7,7 @@ import { useLayoutEffect, useRef } from "react";
 import { services } from "../utils/constants";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-function OurServices() {
+export function OurServices() {
   const component = useRef<HTMLDivElement>(null);
   const slider = useRef<HTMLElement>(null);
 
@@ -111,5 +111,3 @@ function OurServices() {
     </section>
   );
 }
-
-export default OurServices;

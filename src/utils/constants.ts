@@ -1,10 +1,23 @@
 import {
   About,
   Achievement,
+  Menu,
   Service,
   TeamInfo,
   WorkProcess,
 } from "./interface";
+
+export const menus: Menu[] = [
+  "home",
+  "about",
+  "work",
+  "team",
+  "project",
+  "blogs",
+  "contact",
+].map((menu, idx) => {
+  return { id: idx + 1, title: menu, url: "#" + menu };
+});
 
 const about: About = {
   mobileText: [
@@ -170,6 +183,7 @@ const achievements: Achievement[] = [
       "Kalodhunga Creations: <i class='italic'>Shaping The World</i> With A Diverse IT Approach",
     subTitle: "Software Service Company",
     imgSrc: "/assets/kalodhunga_thumbnail.png",
+    link: "https://kalodhunga.com/",
   },
   {
     id: 2,
@@ -178,6 +192,7 @@ const achievements: Achievement[] = [
     subTitle: "Book/Audiobook Summary Platform",
 
     imgSrc: "/assets/bonewa_thumbnail.png",
+    link: "#achievement",
   },
 ];
 

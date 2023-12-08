@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-function About() {
+export function About() {
   return (
     <section id="about" className="container relative py-8 ">
       <h1>Who Are We</h1>
@@ -59,5 +59,3 @@ function About() {
     </section>
   );
 }
-
-export default About;

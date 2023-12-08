@@ -20,6 +20,8 @@ const config: Config = {
         secondary: "#CCCCCC",
         tertiary: "#989898",
         darkText: "#7b7b7b",
+        blogSearch: "#006629",
+        blogBackground: "#282828",
       },
     },
   },

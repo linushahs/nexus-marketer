@@ -6,26 +6,9 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { twMerge } from "tailwind-merge";
 import Logo from "../assets/Logo";
+import { menus } from "@/utils/constants";
 
-type Menu = {
-  id: number;
-  title: string;
-  url: string;
-};
-
-export const menus: Menu[] = [
-  "home",
-  "about",
-  "work",
-  "team",
-  "project",
-  "blogs",
-  "contact",
-].map((menu, idx) => {
-  return { id: idx + 1, title: menu, url: "#" + menu };
-});
-
-function Navbar() {
+export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleMenuOpen = () => {
@@ -159,5 +142,3 @@ function Navbar() {
     </nav>
   );
 }
-
-export default Navbar;

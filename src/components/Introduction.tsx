@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const paragraphStyle = "text-base xl:text-[19px] w-full sm:w-2/3 lg:w-1/3";
 
-function Introduction() {
+export function Introduction() {
   return (
     <section className="container relative py-8 ">
       <h1>
@@ -40,5 +40,3 @@ function Introduction() {
     </section>
   );
 }
-
-export default Introduction;

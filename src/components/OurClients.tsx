@@ -1,9 +1,8 @@
-import * as Icon from "@/components/assets/icons";
 import Image from "next/image";
 
 const iconStyle = "w-[110px] sm:w-[140px] xl:w-[200px] text-white";
 
-function OurClients() {
+export function OurClients() {
   return (
     <section id="clients" className="container py-10">
       <h1 className="text-center">our clients</h1>
@@ -57,5 +56,3 @@ function OurClients() {
     </section>
   );
 }
-
-export default OurClients;

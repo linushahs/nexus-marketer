@@ -7,16 +7,17 @@ const paginationBtnStyle = {
     "w-9 h-9 lg:w-11 lg:h-11 grid place-items-center rounded-full border border-black text-black text-lg lg:text-xl",
   active: "bg-black text-white",
 };
-function Achievements() {
+
+export function Achievements() {
   return (
-    <section className="container relative pt-8 pb-16">
+    <section id="achievement" className="container relative pt-8 pb-16">
       <h1>
         Championing <br /> Achievements, <br />
         <span className="text-primary">one milestone</span> at <br />a time
       </h1>
 
       <div className="flex flex-col gap-8 mt-8">
-        {achievements.map(({ id, title, subTitle, imgSrc }) => (
+        {achievements.map(({ id, title, subTitle, imgSrc, link }) => (
           <div key={id} className="sticky-container sticky top-0 shadow-lg">
             {/* achievement body ----  */}
             <div className="xl:h-[75vh] sticky-body p-6 sm:p-0 flex flex-col sm:flex-row rounded-lg">
@@ -31,13 +32,12 @@ function Achievements() {
                   className="text-center my-4 md:my-8 sm:w-[75%]"
                 ></h2>
 
-                <button
-                  disabled
-                  aria-disabled
+                <a
+                  href={link}
                   className="mt-2 sm:text-lg lg:text-xl  font-medium bg-black rounded-full py-1.5 px-6 text-white capitalize disabled:bg-black/80"
                 >
                   view project
-                </button>
+                </a>
               </div>
 
               {/* right section ---------  */}
@@ -69,5 +69,3 @@ function Achievements() {
     </section>
   );
 }
-
-export default Achievements;

@@ -1,6 +1,6 @@
 import { ArrowUpIcon } from "@heroicons/react/24/outline";
 
-function TheEndSection() {
+export function TheEndSection() {
   return (
     <section className="container pt-10 border-0">
       <div className=" bg-primary rounded-md p-4 sm:pl-8 flex flex-col sm:flex-row justify-between sm:items-center">
@@ -19,5 +19,3 @@ function TheEndSection() {
     </section>
   );
 }
-
-export default TheEndSection;

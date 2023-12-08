@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 const locationAndDateStyle = "sm:text-lg xl:text-xl";
 
-function Homepage() {
+export function Homepage() {
   return (
     <section id="home" className="container relative pt-4 pb-8">
       <div className="flex items-center relative">
@@ -112,5 +112,3 @@ function Homepage() {
     </section>
   );
 }
-
-export default Homepage;

@@ -50,6 +50,7 @@ export type Achievement = {
   title: string;
   subTitle: string;
   imgSrc: string;
+  link: string;
 };
 
 export type WorkProcess = {
@@ -74,4 +75,15 @@ export type ContactFormInputProps = {
   name: string;
   phoneNumber: any;
   description: string;
+};
+
+export type BlogDescriptionProps = {
+  blogDesc: Blog | null;
+  className?: string;
+};
+
+export type Menu = {
+  id: number;
+  title: string;
+  url: string;
 };

@@ -14,7 +14,7 @@ const linkStyle =
   "text-gray-400 text-[17px] sm:text-lg cursor-pointer mt-5 hover:text-white hover:underline capitalize";
 const errorColor = "red-500";
 
-function Footer() {
+export function Footer() {
   const [email, setEmail] = useState("");
   const [isLoading, setLoading] = useState(false);
   const [isError, setIsError] = useState("");
@@ -171,5 +171,3 @@ function Footer() {
     </section>
   );
 }
-
-export default Footer;

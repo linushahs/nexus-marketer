@@ -1,20 +1,11 @@
 "use client";
 
-import sanityClient from "@/utils/sanityClient";
-import Image from "next/image";
-import { useParams } from "next/navigation";
-import { useEffect, useState } from "react";
-
-import { convertDateFormat } from "@/utils/helpers";
-import { Blog, BlogBody } from "@/utils/interface";
+import { Blog, BlogBody, BlogDescriptionProps } from "@/utils/interface";
 import Heading from "./Heading";
 import Paragraph from "./Paragraph";
-import { postSlugGroq } from "@/utils/groq";
+import { twMerge } from "tailwind-merge";
 
-function BlogDescription() {
-  const [blogDesc, setBlogDesc] = useState<Blog | null>(null);
-  const { slug } = useParams();
-
+function BlogDescription({ blogDesc, className }: BlogDescriptionProps) {
   const formatTextBlock = (body: BlogBody) => {
     if (body._type === "block") {
       if (body.style === "normal") {
@@ -25,53 +16,18 @@ function BlogDescription() {
     }
   };
 
-  useEffect(() => {
-    sanityClient.fetch(postSlugGroq(slug)).then((res) => {
-      setBlogDesc(res[0]);
-    });
-  }, [slug]);
-
   if (!blogDesc) {
     return <div>loading...</div>;
   }
 
-  let { title, author, mainImage, _createdAt, body, categories } = blogDesc;
+  let { body, categories } = blogDesc;
 
   return (
-    <main className="w-[60%] ">
-      <h4 className=" text-[60px] leading-[68px] tracking-wide text-secondary capitalize">
-        {title}
-      </h4>
-
-      {/* blog header ------------  */}
-      <header className="text-white flex justify-between items-center mt-10">
-        <span className="flex gap-6 items-center">
-          <Image
-            src={author.image.asset.url}
-            alt="user profile picture"
-            width={100}
-            height={100}
-            loading="lazy"
-            className="w-[60px] aspect-square rounded-full object-cover"
-          />
-          <h3>By {author.name}</h3>
-        </span>
-
-        <h3> {convertDateFormat(_createdAt)}</h3>
-      </header>
-
-      <Image
-        src={mainImage.asset.url}
-        alt="blog poster"
-        width={1000}
-        height={1200}
-        className="mt-8 w-full aspect-video object-cover rounded-lg"
-      />
-
-      <article className="mt-8">{body.map((b) => formatTextBlock(b))}</article>
+    <article className={twMerge("flex-1", className)}>
+      <div className="mt-8">{body.map((b) => formatTextBlock(b))}</div>
 
       {/* tags ------------------  */}
-      <div className="mt-8 flex gap-4">
+      <div className="mt-8 flex flex-wrap gap-4">
         {categories.map((category) => (
           <span
             key={category.title}
@@ -81,7 +37,7 @@ function BlogDescription() {
           </span>
         ))}
       </div>
-    </main>
+    </article>
   );
 }
 

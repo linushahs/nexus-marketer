@@ -1,7 +1,6 @@
-import Image from "next/image";
 import { workProcess } from "../utils/constants";
 
-function WorkProcess() {
+export function WorkProcess() {
   return (
     <section id="work" className="container py-10  ">
       <h1>How do we work?</h1>
@@ -28,5 +27,3 @@ function WorkProcess() {
     </section>
   );
 }
-
-export default WorkProcess;

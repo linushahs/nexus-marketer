@@ -5,16 +5,16 @@ import Image from "next/image";
 import { teamInfo } from "@/utils/constants";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useLayoutEffect, useRef, useState } from "react";
+import { useLayoutEffect, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-gsap.registerPlugin(ScrollTrigger);
-
-function OurTeam() {
+export function OurTeam() {
   const component = useRef<HTMLDivElement>(null);
   const slider = useRef<HTMLElement>(null);
 
   useLayoutEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
     let ctx = gsap.context(() => {
       let panels = gsap.utils.toArray(".team");
       gsap.to(panels, {
@@ -99,5 +99,3 @@ function OurTeam() {
     </section>
   );
 }
-
-export default OurTeam;

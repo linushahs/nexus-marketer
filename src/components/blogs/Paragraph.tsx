@@ -1,7 +1,6 @@
 import { BlogBodyChildren } from "@/utils/interface";
 
-const articleDescStyle =
-  "sm:text-lg xl:text-xl tracking-wide text-tertiary mt-4 ";
+const articleDescStyle = "text-lg xl:text-xl tracking-wide text-tertiary mt-4 ";
 
 function Paragraph({
   blogbodyChildren,
