@@ -26,13 +26,13 @@ export default function RootLayout({
         <Script id="fb-chat" strategy="lazyOnload">
           {`
           var chatbox = document.getElementById('fb-customer-chat');  
-          chatbox.setAttribute("page\_id", "YOUR\_PAGE\_ID");  
+          chatbox.setAttribute("page\_id", "105097512671054");  
           chatbox.setAttribute("attribution", "biz\_inbox");  
             
           window.fbAsyncInit = function() {  
           FB.init({  
           xfbml            : true,  
-          version          : 'v12.0'  
+          version          : 'v18.0'  
           });  
           };  
             

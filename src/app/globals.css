@@ -135,10 +135,10 @@ html {
 
   .primary-btn {
     font-family: "SF Pro Medium", sans-serif;
-    @apply px-4 text-base lg:text-lg xl:text-xl py-2.5  rounded-full bg-primary text-background flex justify-center items-center gap-3;
+    @apply px-4 text-base sm:text-lg xl:text-xl py-2.5  rounded-full bg-primary text-background flex justify-center items-center gap-3;
   }
 
   .landing-title {
-    @apply capitalize tracking-wide lg:tracking-normal text-secondary font-[600] lg:font-[500] text-[10vw] leading-[10vw] lg:text-[8.5vw] lg:leading-[8.5vw];
+    @apply capitalize tracking-wide lg:tracking-normal text-secondary font-[600] lg:font-[500] text-[32px] leading-[32px] sm:text-[8vw] sm:leading-[8vw] lg:text-[8.5vw] lg:leading-[8.5vw];
   }
 }

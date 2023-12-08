@@ -24,7 +24,7 @@ export function Homepage() {
         <motion.hr
           initial={{ y: "-100%", opacity: 0 }}
           animate={{ y: 0, opacity: 100, transition: { delay: 1 } }}
-          className="absolute top-1/2 right-0 flex-1 w-[15%] sm:w-[20%] lg:w-[32%] 3xl:w-[20%] border-tertiary"
+          className="absolute top-1/2 right-0 flex-1 w-[15%] sm:w-[30%] lg:w-[32%] 3xl:w-[20%] border-tertiary"
         />
       </div>
 
@@ -51,7 +51,7 @@ export function Homepage() {
               opacity: 100,
               transition: { delay: 1.2, duration: 1 },
             }}
-            className="text-tertiary mb-8 lg:my-8 xl:text-xl 3xl:text-xl"
+            className="text-tertiary mb-8 lg:my-8 sm:text-xl 3xl:text-2xl "
           >
             Nexus Marketers: Your digital growth partner. We craft compelling
             websites, employ innovative strategies, and master advanced SEO for
@@ -106,7 +106,7 @@ export function Homepage() {
           width={1000}
           height={300}
           priority={true}
-          className="w-full rounded-lg h-[180px] lg:h-auto"
+          className="w-full rounded-lg h-[180px] sm:h-auto"
         />
       </motion.div>
     </section>
