@@ -33,7 +33,7 @@ function OurTeam() {
 
   return (
     <section className="container ">
-      <div ref={component} className="lg:h-screen py-10 lg:py-6   ">
+      <div ref={component} className="lg:h-screen py-10 xl:py-6   ">
         <h1>our team</h1>
 
         <main

@@ -184,4 +184,12 @@ const achievements: Achievement[] = [
 const footerContent =
   "Nexus Marketers, your premier marketing agency, is dedicated to        transforming your online presence. With expertise in crafting          compelling websites, pioneering innovative strategies, and          implementing advanced SEO tactics, we are committed to elevating your          brand&apos;s visibility and driving sustainable growth.";
 
-export { footerContent, about, services, workProcess, teamInfo, achievements };
+export {
+  footerContent,
+  about,
+  services,
+  workProcess,
+  teamInfo,
+  achievements,
+  blogs,
+};
