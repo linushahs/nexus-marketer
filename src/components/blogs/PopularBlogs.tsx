@@ -9,7 +9,10 @@ function PopularBlogs() {
     <aside className="bg-transparent lg:bg-blogBackground rounded-lg md:w-[45%] lg:w-full lg:px-6 py-8   lg:mt-[180px]">
       {/* search bar ----------------  */}
       <div className="flex flex-col-reverse lg:flex-col gap-4">
-        <form className="flex gap-3 text-lg">
+        <form
+          onSubmit={(e) => e.preventDefault()}
+          className="flex gap-3 text-lg"
+        >
           <input
             type="text"
             className="w-full text-gray-600 rounded-md py-2.5 px-4"

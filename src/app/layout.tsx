@@ -4,6 +4,7 @@ import "./globals.css";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/free-mode";
+import FacebookChat from "./FacebookChat";
 
 export const metadata: Metadata = {
   title: "Nexus Marketer",
@@ -17,7 +18,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        {children}
+        <FacebookChat />
+      </body>
     </html>
   );
 }

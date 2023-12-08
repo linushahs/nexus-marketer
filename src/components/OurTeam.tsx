@@ -4,9 +4,9 @@ import Image from "next/image";
 
 import { teamInfo } from "@/utils/constants";
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useLayoutEffect, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 export function OurTeam() {
   const component = useRef<HTMLDivElement>(null);
@@ -29,7 +29,7 @@ export function OurTeam() {
       });
     }, component);
     return () => ctx.revert();
-  });
+  }, []);
 
   return (
     <section className="container ">

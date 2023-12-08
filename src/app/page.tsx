@@ -1,6 +1,3 @@
-"use client";
-
-import { useEffect } from "react";
 import * as C from "@/components";
 
 export default function Home() {

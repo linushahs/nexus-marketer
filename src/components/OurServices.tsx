@@ -4,14 +4,17 @@ import { ArrowUpRightIcon } from "@heroicons/react/24/outline";
 import gsap from "gsap";
 import Image from "next/image";
 import { useLayoutEffect, useRef } from "react";
-import { services } from "../utils/constants";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { services } from "../utils/constants";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 export function OurServices() {
   const component = useRef<HTMLDivElement>(null);
   const slider = useRef<HTMLElement>(null);
 
   useLayoutEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
     let ctx = gsap.context(() => {
       let panels = gsap.utils.toArray(".service");
       gsap.to(panels, {
@@ -26,7 +29,7 @@ export function OurServices() {
       });
     }, component);
     return () => ctx.revert();
-  });
+  }, []);
 
   return (
     <section id="services" className="container ">

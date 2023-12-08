@@ -139,6 +139,6 @@ html {
   }
 
   .landing-title {
-    @apply capitalize text-secondary font-[600] lg:font-[500] text-[8.5vw] leading-[8.5vw] 3xl:text-[9.5vw] 3xl:leading-[9.5vw];
+    @apply capitalize tracking-wide lg:tracking-normal text-secondary font-[600] lg:font-[500] text-[10vw] leading-[10vw] lg:text-[8.5vw] lg:leading-[8.5vw];
   }
 }

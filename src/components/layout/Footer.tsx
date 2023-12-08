@@ -51,7 +51,7 @@ export function Footer() {
         console.log(res);
       })
       .catch((err) => {
-        setIsError(err.message);
+        setIsError(err.response.data.detail);
         setLoading(false);
         console.log(err);
       });
@@ -142,7 +142,7 @@ export function Footer() {
               className={twMerge(
                 ` bg-white py-2 px-3 rounded-lg mt-6 text-black w-[80%] text-lg`,
                 isError &&
-                  `border-[3px] border-${errorColor} focus:outline-${errorColor}`
+                  `border-[3px] border-red-500 focus:outline-red-500 focus:ring-0`
               )}
               onChange={handleEmailInput}
               required

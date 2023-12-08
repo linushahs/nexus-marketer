@@ -104,9 +104,9 @@ export function Homepage() {
           src="/assets/landing-thumbnail.png"
           alt="thumbnail"
           width={1000}
-          height={200}
+          height={300}
           priority={true}
-          className="w-full rounded-lg"
+          className="w-full rounded-lg h-[180px] lg:h-auto"
         />
       </motion.div>
     </section>
