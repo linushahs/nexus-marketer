@@ -29,15 +29,13 @@ function BlogDescription() {
     sanityClient.fetch(postSlugGroq(slug)).then((res) => {
       setBlogDesc(res[0]);
     });
-  }, []);
+  }, [slug]);
 
   if (!blogDesc) {
     return <div>loading...</div>;
   }
 
   let { title, author, mainImage, _createdAt, body, categories } = blogDesc;
-
-  console.log(categories);
 
   return (
     <main className="w-[60%] ">
