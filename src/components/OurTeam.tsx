@@ -44,14 +44,14 @@ export function OurTeam() {
             <div
               key={member.id}
               className="team
-          min-w-[300px] cursor-pointer  lg:min-w-[22%]"
+          min-w-[300px] cursor-pointer lg:min-w-[22%]"
             >
               <Image
                 alt="avatar"
                 width={400}
                 height={400}
                 src={member.imgSrc}
-                className="w-full h-[55%] rounded-lg object-cover"
+                className="w-full h-[85%] rounded-lg object-cover"
                 draggable={false}
               />
 
