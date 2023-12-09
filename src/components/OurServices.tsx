@@ -16,17 +16,31 @@ export function OurServices() {
     gsap.registerPlugin(ScrollTrigger);
 
     let ctx = gsap.context(() => {
-      let panels = gsap.utils.toArray(".service");
-      gsap.to(panels, {
-        xPercent: -80 * (panels.length - 1),
-        ease: "none",
-        scrollTrigger: {
-          trigger: component.current,
-          pin: true,
-          scrub: 2,
-          end: () => "+=" + slider.current?.offsetWidth,
+      let mm = gsap.matchMedia();
+      mm.add(
+        {
+          isDesktop: `(min-width: 1320px)`,
+          isMobile: `(max-width: 1319px)`,
         },
-      });
+        (context: any) => {
+          let { isDesktop } = context.conditions;
+          let panels = gsap.utils.toArray(".service");
+          gsap.to(panels, {
+            xPercent: isDesktop
+              ? -68 * panels.length + 132
+              : -100 * (panels.length - 2),
+            ease: "none",
+            scrollTrigger: {
+              trigger: component.current,
+              pin: true,
+              scrub: 1,
+              start: "top top",
+              end: () => "+=" + slider.current?.offsetWidth,
+              markers: true,
+            },
+          });
+        }
+      );
     }, component);
     return () => ctx.revert();
   }, []);
