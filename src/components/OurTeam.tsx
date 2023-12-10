@@ -11,45 +11,58 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 export function OurTeam() {
   const component = useRef<HTMLDivElement>(null);
   const slider = useRef<HTMLElement>(null);
+  const serviceHeader = useRef<HTMLElement>(null);
 
   useLayoutEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
     let ctx = gsap.context(() => {
-      let mm = gsap.matchMedia();
-      mm.add(
-        {
-          isDesktop: `(min-width: 1320px)`,
-          isMobile: `(max-width: 1319px)`,
+      let { scrollWidth, offsetWidth } = slider.current as any;
+      let amountToScroll = scrollWidth - offsetWidth + 32;
+      let endOfScroll =
+        amountToScroll + (serviceHeader.current?.clientHeight as number);
+
+      gsap.to(slider.current, {
+        translateX: -amountToScroll,
+        ease: "none",
+        duration: 5,
+        scrollTrigger: {
+          trigger: component.current,
+          pin: true,
+          scrub: 1,
+          start: "0 top",
+          end: () => "+=" + endOfScroll,
+          markers: true,
         },
-        (context: any) => {
-          let { isDesktop } = context.conditions;
-          let panels = gsap.utils.toArray(".team");
-          gsap.to(panels, {
-            xPercent: isDesktop
-              ? -68 * panels.length + 132
-              : -100 * (panels.length - 2),
-            ease: "none",
-            scrollTrigger: {
-              trigger: component.current,
-              pin: true,
-              scrub: 1,
-              start: "top top",
-              end: () => "+=" + slider.current?.offsetWidth,
-              markers: true,
-            },
-          });
-        }
-      );
+      });
     }, component);
-    return () => ctx.revert();
+
+    const delayedCall = gsap.delayedCall(1, () => {
+      ScrollTrigger.refresh();
+    });
+
+    //cleanup function
+    return () => {
+      ctx.revert();
+      delayedCall.kill();
+    };
   }, []);
 
   return (
-    <section className="container team-container">
-      <div ref={component} className=" lg:h-screen pb-10 xl:pb-6">
-        <h1 className="pt-4 pb-8">our team</h1>
-        <main ref={slider} className="hidden team-slider lg:flex gap-8  pl-8">
+    <section className="bg-background border-b border-gray-700/40">
+      <div ref={component} className=" lg:h-screen ">
+        <header
+          ref={serviceHeader}
+          className="container border-0 py-10 lg:py-6"
+        >
+          <h1>our team</h1>
+        </header>
+
+        {/* team member slider in desktop -----------  */}
+        <main
+          ref={slider}
+          className="container hidden team-slider lg:flex gap-8 pt-4 ml-2 border-0"
+        >
           {teamInfo.map((member) => (
             <div
               key={member.id}
