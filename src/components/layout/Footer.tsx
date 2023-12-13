@@ -139,6 +139,7 @@ export function Footer() {
             <input
               type="text"
               id="discoverInput"
+              value={email}
               className={twMerge(
                 ` bg-white py-2 px-3 rounded-lg mt-6 text-black w-[80%] text-lg`,
                 isError &&
